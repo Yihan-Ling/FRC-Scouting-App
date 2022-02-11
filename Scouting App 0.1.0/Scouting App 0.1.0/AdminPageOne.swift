@@ -13,7 +13,7 @@ struct AdminPageOne: View {
 
     var body: some View {
         List (teams){ team in
-            AdminTeamRow(team: team)
+            FieldPageRow(team: team)
         }
     }
 }

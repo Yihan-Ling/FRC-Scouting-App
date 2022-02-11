@@ -34,7 +34,7 @@ struct Home: View {
                     Spacer()
                             .frame(height:100)
                     
-                    NavigationLink(destination: FieldPageOne()) {
+                    NavigationLink(destination: FieldPageOne(team: teams[0])) {
                         FieldButton()
                     }
                 }

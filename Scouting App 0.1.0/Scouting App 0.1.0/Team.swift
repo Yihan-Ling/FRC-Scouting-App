@@ -11,5 +11,5 @@ struct Team: Hashable, Codable, Identifiable{
     var id: String
     var name: String
     var school: String
-    
+    var index: Int
 }
