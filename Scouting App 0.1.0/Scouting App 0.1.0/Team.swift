@@ -12,4 +12,7 @@ struct Team: Hashable, Codable, Identifiable{
     var name: String
     var school: String
     var index: Int
+    var present: Bool
+    var barIndex: Int
+    var ballScore: Int
 }

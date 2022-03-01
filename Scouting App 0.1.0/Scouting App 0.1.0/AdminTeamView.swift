@@ -9,8 +9,13 @@ import SwiftUI
 
 struct AdminTeamView: View {
     var team: Team
+    let arr=UserDefaults.standard.object(forKey: "presents") as! [Bool]
     var body: some View {
-        Text(team.id+" Admin")
+        VStack{
+            Text(team.id+" Admin")
+            Text(String(arr[team.index]))
+        }
+        
     }
 }
 

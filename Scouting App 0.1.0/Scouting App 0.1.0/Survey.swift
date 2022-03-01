@@ -5,30 +5,43 @@
 //  Created by Carson Ling on 2/11/22.
 //
 
+
 import SwiftUI
 
 struct Survey: View {
-    @State var teamid: String
-    @State var present: Bool = true
-    @State private var barIndex = 0
-    
+    @State var team: Team
+//    let defaults = UserDefaults.standard
+//    @AppStorage("present") var present = true
+//    $team.present=
     var barOptions = ["0", "5", "10", "15", "50"]
+    @State var arr=UserDefaults.standard.object(forKey: "presents") as! [Bool]
     var body: some View {
-        NavigationView {
+        
+        VStack{
+            Text("Survey")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(Color.blue)
             Form {
-                TextField("Username", text: $teamid)
-                Toggle(isOn: $present) {
-                    Text("Present")
-                }
+                TextField("Username", text: $team.id)
+                Toggle("Present", isOn: $team.present)
+//                $present = $team.present
+//               UserDefaults.standard.set($team.present, forKey: "email")
+                
                 Section(header: Text("EVALUATION")) {
-//                    Toggle(isOn: $notificationsEnabled) {
-//                        Text("Enabled")
-//                    }
-                    Picker(selection: $barIndex, label: Text("Bar Score")) {
+
+                    Picker(selection: $team.barIndex, label: Text("Bar Score")) {
                         ForEach(0 ..< barOptions.count) {
                             Text(self.barOptions[$0])
                         }
                     }
+                    
+                    Stepper(value: $team.ballScore,
+                            in: 0...100,
+                            label: {
+                        Text("Lower Hub Score:  \(self.team.ballScore)")
+                    })
+                    
                 }
                 Section(header: Text("INFO")) {
                     HStack {
@@ -38,22 +51,65 @@ struct Survey: View {
                     }
                 }
                 
-                Section {
-                    Button(action: {
-                        print("Perform an action here...")
-                    }) {
-                        Text("Reset All Selections")
-                    }
+//                Section {
+//                    Button(action: {
+//                        save()
+//                    }) {
+//                        Text("Submit")
+//                    }
+//                    NavigationLink(destination: SaveResult(team: team)) {
+//                        Text("Submit")
+//                            .font(.headline)
+//                            .multilineTextAlignment(.center)
+//                    }
+                Button("Save"){
+                    save(team:team)
                 }
+//                }
+                
             }
-            .navigationBarTitle("Survey")
+//            .navigationBarTitle("Survey")
         }
-
+        
     }
+    func save(team:Team){
+        presents[team.index]=team.present
+        teams[team.index].barIndex=team.barIndex
+        teams[team.index].ballScore=team.ballScore
+
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(presents, forKey: "presents")
+        presents=userDefaults.object(forKey: "presents") as! [Bool]
+    }
+    func getDocumentDirectory() -> URL {
+        let paths=FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+//    func save() -> String{
+//
+//        let str = "Test"
+//        let url = getDocumentDirectory().appendingPathComponent("message.txt")
+//        let input = "No change"
+//        do{
+//            try str.write(to: url, atomically: true, encoding: .utf8)
+//            let input = try String(contentsOf: url)
+//            return(input)
+//        }
+//        catch{
+//            print(error.localizedDescription)
+//        }
+//        return(input)
+//    }
+//    func save (team: String, present:Bool, barScore:Int, ballScore:Int) -> (team: String, present: Bool, barScore: Int, ballScore: Int){
+//        
+//    }
 }
 
 struct Survey_Previews: PreviewProvider {
     static var previews: some View {
-        Survey(teamid:"7407")
+        Survey(team:teams[0])
     }
 }
+
+

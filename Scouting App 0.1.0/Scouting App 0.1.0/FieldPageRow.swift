@@ -28,7 +28,12 @@ struct FieldPageRow: View {
                 
                 Spacer()
                     .frame(width: 50)
-                NavigationLink(destination: FieldTeamView(team:teams[team.index])) {
+//                NavigationLink(destination: FieldTeamView(team:teams[team.index])) {
+//                    Text(team.name)
+//                        .font(.headline)
+//                        .multilineTextAlignment(.center)
+//                }
+                NavigationLink(destination: Survey(team:team)) {
                     Text(team.name)
                         .font(.headline)
                         .multilineTextAlignment(.center)

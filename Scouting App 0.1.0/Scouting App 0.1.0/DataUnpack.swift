@@ -8,10 +8,21 @@
 import Foundation
 
 var teams: [Team] = load("teamsData.json")
+var presents: [Bool] = [true, true, true, true]
 
 func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
-
+//    let url = getDocumentDirectory().appendingPathComponent(filename)
+    let data : Data
+//    do{
+//        try data=Data(contentsOf: url)
+//
+//    } catch{
+//        print(error.localizedDescription)
+//    }
+   
+//        do{
+//            data = try Data(contentsOf: url)
+//        }
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
     else {
         fatalError("Couldn't find \(filename) in main bundle.")
@@ -30,3 +41,10 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
+func getDocumentDirectory() -> URL {
+    let paths=FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
+
+
