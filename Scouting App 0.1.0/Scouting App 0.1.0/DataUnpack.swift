@@ -9,6 +9,35 @@ import Foundation
 
 var teams: [Team] = load("teamsData.json")
 var presents: [Bool] = [true, true, true, true]
+var auBScore: [Int] = [0,0,0]
+var auLeave: [Bool] = [false,false,false]
+var cargoScore: [Int] = [0,0,0]
+var climbScore: [Int] = [0,0,0]
+var climbOption: [Int] = [0,0,0]
+
+func initialSave(team:Team){
+    for team in teams{
+        presents[team.index]=team.present
+        teams[team.index].barIndex=team.barIndex
+        teams[team.index].ballScore=team.ballScore
+        auBScore[team.index]=team.auBScore
+        auLeave[team.index]=team.auLeave
+        cargoScore[team.index]=team.cargoScore
+        climbScore[team.index]=climbOption[team.climbScore]
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(presents, forKey: "presents")
+        presents=userDefaults.object(forKey: "presents") as! [Bool]
+        userDefaults.set(auBScore, forKey: "auBScore")
+        auBScore=userDefaults.object(forKey: "auBScore") as! [Int]
+        userDefaults.set(auLeave, forKey: "auLeave")
+        auLeave=userDefaults.object(forKey: "auLeave") as! [Bool]
+        userDefaults.set(cargoScore, forKey: "cargoScore")
+        cargoScore=userDefaults.object(forKey: "cargoScore") as! [Int]
+        userDefaults.set(climbScore, forKey: "climbScore")
+        climbScore=userDefaults.object(forKey: "climbScore") as! [Int]
+    }
+    
+}
 
 func load<T: Decodable>(_ filename: String) -> T {
 //    let url = getDocumentDirectory().appendingPathComponent(filename)

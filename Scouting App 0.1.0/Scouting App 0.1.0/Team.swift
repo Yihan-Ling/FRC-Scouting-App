@@ -12,7 +12,29 @@ struct Team: Hashable, Codable, Identifiable{
     var name: String
     var school: String
     var index: Int
+//    var matchOne: Dictionary<String, Any>
+//    var matchTwo: Dictionary<String, Any>
+//    var matchThree: Dictionary<String, Any>
     var present: Bool
     var barIndex: Int
     var ballScore: Int
+    var auBScore: Int
+    var auLeave: Bool
+    var cargoScore: Int
+    var climbScore: Int
+//    var matchOne: Match
+//    var matchTwo: Match
+//    var matchThree: Match
 }
+
+//struct Match: Hashable, Codable, Identifiable{
+//    var id: String
+//    var index: Int
+//    var present: Bool
+//    var barIndex: Int
+//    var ballScore: Int
+//    var auBScore: Int
+//    var auLeave: Bool
+//    var cargoScore: Int
+//    var climbScore: Int
+//}

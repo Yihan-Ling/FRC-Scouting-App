@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct AdminTeamView: View {
+//    var team: Team
+//    let pResents=UserDefaults.standard.object(forKey: "presents") as! [Bool]
+//    let aUBScore=UserDefaults.standard.object(forKey: "auBScore") as! [Int]
+//    let aULeave=UserDefaults.standard.object(forKey: "auLeave") as! [Bool]
     var team: Team
-    let arr=UserDefaults.standard.object(forKey: "presents") as! [Bool]
     var body: some View {
-        VStack{
-            Text(team.id+" Admin")
-            Text(String(arr[team.index]))
-        }
-        
+//        VStack{
+//            Text(team.id+" Admin")
+//            Text(String(pResents[team.index]))
+//            Text(String(aUBScore[team.index]))
+//            Text(String(auLeave[team.index]))
+//            Text(String(cargoScore[team.index]))
+//            Text(String(climbScore[team.index]))
+//        }
+        GameRow(team:team)
     }
 }
 

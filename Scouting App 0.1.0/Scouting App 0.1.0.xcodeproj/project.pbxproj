@@ -17,13 +17,17 @@
 		B52F84B527B0688100B81A66 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F84B427B0688100B81A66 /* Home.swift */; };
 		B52F84B727B0688300B81A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52F84B627B0688300B81A66 /* Assets.xcassets */; };
 		B52F84BA27B0688300B81A66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52F84B927B0688300B81A66 /* Preview Assets.xcassets */; };
-		B5642DAD27CD70FA00463BC5 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5642DAC27CD70FA00463BC5 /* TestFile.swift */; };
+		B54FAA5527E3D0FA000A026E /* GenerateQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5427E3D0FA000A026E /* GenerateQRCode.swift */; };
+		B54FAA5827E3DBAA000A026E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B54FAA5727E3DBAA000A026E /* CodeScanner */; };
+		B54FAA5B27E3DC8E000A026E /* ScanQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5A27E3DC8E000A026E /* ScanQRCode.swift */; };
+		B54FAA5E27E3E347000A026E /* ScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5D27E3E347000A026E /* ScanResult.swift */; };
+		B54FAA6027E3E746000A026E /* QRManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5F27E3E746000A026E /* QRManage.swift */; };
 		B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */; };
 		B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */; };
 		B5C35DF127B5C0B700550D86 /* FieldPageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */; };
 		B5C35DF327B5C1B300550D86 /* FieldTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */; };
-		B5C35DF527B5C48A00550D86 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DF427B5C48A00550D86 /* File.swift */; };
-		B5C9F8D227C0547B004C4A61 /* SaveResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9F8D127C0547B004C4A61 /* SaveResult.swift */; };
+		B5DE815627DED985004D0BB8 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815527DED985004D0BB8 /* GameRow.swift */; };
+		B5DE815827DEE927004D0BB8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815727DEE927004D0BB8 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,13 +42,17 @@
 		B52F84B427B0688100B81A66 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B52F84B627B0688300B81A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B52F84B927B0688300B81A66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B5642DAC27CD70FA00463BC5 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestFile.swift; path = "Scouting App 0.1.0/TestFile.swift"; sourceTree = SOURCE_ROOT; };
+		B54FAA5427E3D0FA000A026E /* GenerateQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQRCode.swift; sourceTree = "<group>"; };
+		B54FAA5A27E3DC8E000A026E /* ScanQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCode.swift; sourceTree = "<group>"; };
+		B54FAA5C27E3DE0A000A026E /* Scouting-App-0-1-0-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Scouting-App-0-1-0-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B54FAA5D27E3E347000A026E /* ScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResult.swift; sourceTree = "<group>"; };
+		B54FAA5F27E3E746000A026E /* QRManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRManage.swift; sourceTree = "<group>"; };
 		B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamRow.swift; sourceTree = "<group>"; };
 		B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamView.swift; sourceTree = "<group>"; };
 		B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldPageRow.swift; sourceTree = "<group>"; };
 		B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTeamView.swift; sourceTree = "<group>"; };
-		B5C35DF427B5C48A00550D86 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		B5C9F8D127C0547B004C4A61 /* SaveResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveResult.swift; sourceTree = "<group>"; };
+		B5DE815527DED985004D0BB8 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
+		B5DE815727DEE927004D0BB8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54FAA5827E3DBAA000A026E /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +94,14 @@
 		B52F84B127B0688100B81A66 /* Scouting App 0.1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				B54FAA5C27E3DE0A000A026E /* Scouting-App-0-1-0-Info.plist */,
+				B54FAA4A27E3C720000A026E /* Generate */,
+				B54FAA4727E3C669000A026E /* Manage */,
 				B517040127B4636C0046DD06 /* Files */,
 				B52F84B227B0688100B81A66 /* Scouting_App_0_1_0App.swift */,
 				B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */,
+				B5DE815527DED985004D0BB8 /* GameRow.swift */,
+				B5DE815727DEE927004D0BB8 /* GameView.swift */,
 				B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */,
 				B52F84B427B0688100B81A66 /* Home.swift */,
 				B508973227B70E7F0087EDD9 /* Survey.swift */,
@@ -95,12 +109,10 @@
 				B517040627B464C40046DD06 /* AdminPageOne.swift */,
 				B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */,
 				B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */,
-				B5C35DF427B5C48A00550D86 /* File.swift */,
 				B51703FF27B462CD0046DD06 /* DataUnpack.swift */,
 				B51703FD27B460A50046DD06 /* Team.swift */,
-				B5C9F8D127C0547B004C4A61 /* SaveResult.swift */,
-				B5642DAC27CD70FA00463BC5 /* TestFile.swift */,
 				B52F84B627B0688300B81A66 /* Assets.xcassets */,
+				B54FAA5127E3CE83000A026E /* Scaning */,
 				B52F84B827B0688300B81A66 /* Preview Content */,
 			);
 			path = "Scouting App 0.1.0";
@@ -112,6 +124,31 @@
 				B52F84B927B0688300B81A66 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B54FAA4727E3C669000A026E /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				B54FAA5F27E3E746000A026E /* QRManage.swift */,
+			);
+			path = Manage;
+			sourceTree = "<group>";
+		};
+		B54FAA4A27E3C720000A026E /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				B54FAA5427E3D0FA000A026E /* GenerateQRCode.swift */,
+			);
+			path = Generate;
+			sourceTree = "<group>";
+		};
+		B54FAA5127E3CE83000A026E /* Scaning */ = {
+			isa = PBXGroup;
+			children = (
+				B54FAA5A27E3DC8E000A026E /* ScanQRCode.swift */,
+				B54FAA5D27E3E347000A026E /* ScanResult.swift */,
+			);
+			path = Scaning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +167,9 @@
 			dependencies = (
 			);
 			name = "Scouting App 0.1.0";
+			packageProductDependencies = (
+				B54FAA5727E3DBAA000A026E /* CodeScanner */,
+			);
 			productName = "Scouting App 0.1.0";
 			productReference = B52F84AF27B0688100B81A66 /* Scouting App 0.1.0.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +198,9 @@
 				Base,
 			);
 			mainGroup = B52F84A627B0688100B81A66;
+			packageReferences = (
+				B54FAA5627E3DBAA000A026E /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = B52F84B027B0688100B81A66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,17 +230,20 @@
 			files = (
 				B51703F127B367D80046DD06 /* FieldPageOne.swift in Sources */,
 				B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */,
+				B54FAA5B27E3DC8E000A026E /* ScanQRCode.swift in Sources */,
+				B54FAA5527E3D0FA000A026E /* GenerateQRCode.swift in Sources */,
 				B5C35DF127B5C0B700550D86 /* FieldPageRow.swift in Sources */,
-				B5642DAD27CD70FA00463BC5 /* TestFile.swift in Sources */,
 				B517040727B464C40046DD06 /* AdminPageOne.swift in Sources */,
+				B5DE815827DEE927004D0BB8 /* GameView.swift in Sources */,
 				B5C35DF327B5C1B300550D86 /* FieldTeamView.swift in Sources */,
 				B508973327B70E7F0087EDD9 /* Survey.swift in Sources */,
-				B5C9F8D227C0547B004C4A61 /* SaveResult.swift in Sources */,
+				B54FAA6027E3E746000A026E /* QRManage.swift in Sources */,
+				B54FAA5E27E3E347000A026E /* ScanResult.swift in Sources */,
+				B5DE815627DED985004D0BB8 /* GameRow.swift in Sources */,
 				B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */,
 				B517040027B462CD0046DD06 /* DataUnpack.swift in Sources */,
 				B52F84B527B0688100B81A66 /* Home.swift in Sources */,
 				B51703FE27B460A50046DD06 /* Team.swift in Sources */,
-				B5C35DF527B5C48A00550D86 /* File.swift in Sources */,
 				B52F84B327B0688100B81A66 /* Scouting_App_0_1_0App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +377,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Scouting App 0.1.0/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Scouting-App-0-1-0-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -359,6 +407,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Scouting App 0.1.0/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Scouting-App-0-1-0-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -399,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B54FAA5627E3DBAA000A026E /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B54FAA5727E3DBAA000A026E /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B54FAA5627E3DBAA000A026E /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B52F84A727B0688100B81A66 /* Project object */;
 }

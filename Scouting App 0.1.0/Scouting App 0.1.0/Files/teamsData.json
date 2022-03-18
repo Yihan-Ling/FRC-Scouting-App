@@ -7,6 +7,10 @@
         "present": true,
         "barIndex": 0,
         "ballScore": 0,
+        "auBScore": 0,
+        "auLeave": false,
+        "cargoScore": 0,
+        "climbScore": 0,
     },
     {
         "id": "6106X",
@@ -16,6 +20,10 @@
         "present": true,
         "barIndex": 0,
         "ballScore": 0,
+        "auBScore": 0,
+        "auLeave": false,
+        "cargoScore": 0,
+        "climbScore": 0,
     },
     {
         "id": "1234",
@@ -25,5 +33,9 @@
         "present": true,
         "barIndex": 0,
         "ballScore": 0,
+        "auBScore": 0,
+        "auLeave": false,
+        "cargoScore": 0,
+        "climbScore": 0,
     }
 ]
