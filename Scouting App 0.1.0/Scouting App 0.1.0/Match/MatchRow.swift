@@ -7,20 +7,19 @@
 
 import SwiftUI
 
-struct GameRow: View {
-    var team: Team
+struct MatchRow: View {
+    var match: Match
     var body: some View {
-//        NavigationView{
         
             HStack {
                 VStack{
-                    Text("Game One")
+                    Text("Game "+String(match.matchNum+1))
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.yellow)
                         .multilineTextAlignment(.center)
                         .frame(width: 150)
-                    Text(team.id)
+                    Text(match.id)
                         .font(.caption)
                         .frame(width: 150)
                 }
@@ -28,25 +27,25 @@ struct GameRow: View {
                 Spacer()
                     .frame(width: 50)
                 
-                NavigationLink(destination: QRManage()) {
-                    Text(team.name)
+                NavigationLink(destination: MatchView(match:match)) {
+                    Text("More Detail")
                         .font(.headline)
                         .multilineTextAlignment(.center)
                 }
                 
                 
-            }
-//        }
+            } 
+
         
     }
 }
 
-struct GameRow_Previews: PreviewProvider {
+struct MatchRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AdminPageRow(team: teams[0])
+            MatchRow(match: matches[0])
                 .previewLayout(.fixed(width: 300, height: 70))
-            AdminPageRow(team: teams[1])
+            MatchRow(match: matches[1])
                 .previewLayout(.fixed(width: 300, height: 70))
         }
     }

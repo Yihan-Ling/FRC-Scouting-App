@@ -33,7 +33,7 @@ struct FieldPageRow: View {
 //                        .font(.headline)
 //                        .multilineTextAlignment(.center)
 //                }
-                NavigationLink(destination: Survey(team:team)) {
+                NavigationLink(destination: Survey(team:team, match: matches[0])) {
                     Text(team.name)
                         .font(.headline)
                         .multilineTextAlignment(.center)

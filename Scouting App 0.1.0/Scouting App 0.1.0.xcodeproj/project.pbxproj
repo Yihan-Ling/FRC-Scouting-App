@@ -20,14 +20,16 @@
 		B54FAA5527E3D0FA000A026E /* GenerateQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5427E3D0FA000A026E /* GenerateQRCode.swift */; };
 		B54FAA5827E3DBAA000A026E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B54FAA5727E3DBAA000A026E /* CodeScanner */; };
 		B54FAA5B27E3DC8E000A026E /* ScanQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5A27E3DC8E000A026E /* ScanQRCode.swift */; };
-		B54FAA5E27E3E347000A026E /* ScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5D27E3E347000A026E /* ScanResult.swift */; };
+		B54FAA5E27E3E347000A026E /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5D27E3E347000A026E /* Handle.swift */; };
 		B54FAA6027E3E746000A026E /* QRManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5F27E3E746000A026E /* QRManage.swift */; };
+		B54FAA6227E42656000A026E /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA6127E42656000A026E /* Match.swift */; };
 		B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */; };
 		B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */; };
 		B5C35DF127B5C0B700550D86 /* FieldPageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */; };
 		B5C35DF327B5C1B300550D86 /* FieldTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */; };
-		B5DE815627DED985004D0BB8 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815527DED985004D0BB8 /* GameRow.swift */; };
-		B5DE815827DEE927004D0BB8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815727DEE927004D0BB8 /* GameView.swift */; };
+		B5C3C9EB27E817C400480445 /* matchData.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C3C9EA27E817C400480445 /* matchData.json */; };
+		B5DE815627DED985004D0BB8 /* MatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815527DED985004D0BB8 /* MatchRow.swift */; };
+		B5DE815827DEE927004D0BB8 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815727DEE927004D0BB8 /* MatchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,14 +47,16 @@
 		B54FAA5427E3D0FA000A026E /* GenerateQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQRCode.swift; sourceTree = "<group>"; };
 		B54FAA5A27E3DC8E000A026E /* ScanQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCode.swift; sourceTree = "<group>"; };
 		B54FAA5C27E3DE0A000A026E /* Scouting-App-0-1-0-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Scouting-App-0-1-0-Info.plist"; sourceTree = SOURCE_ROOT; };
-		B54FAA5D27E3E347000A026E /* ScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResult.swift; sourceTree = "<group>"; };
+		B54FAA5D27E3E347000A026E /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
 		B54FAA5F27E3E746000A026E /* QRManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRManage.swift; sourceTree = "<group>"; };
+		B54FAA6127E42656000A026E /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamRow.swift; sourceTree = "<group>"; };
 		B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamView.swift; sourceTree = "<group>"; };
 		B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldPageRow.swift; sourceTree = "<group>"; };
 		B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTeamView.swift; sourceTree = "<group>"; };
-		B5DE815527DED985004D0BB8 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
-		B5DE815727DEE927004D0BB8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B5C3C9EA27E817C400480445 /* matchData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = matchData.json; sourceTree = "<group>"; };
+		B5DE815527DED985004D0BB8 /* MatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRow.swift; sourceTree = "<group>"; };
+		B5DE815727DEE927004D0BB8 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +74,11 @@
 		B517040127B4636C0046DD06 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				B51703FD27B460A50046DD06 /* Team.swift */,
+				B54FAA6127E42656000A026E /* Match.swift */,
 				B517040427B463D00046DD06 /* teamsData.json */,
+				B5C3C9EA27E817C400480445 /* matchData.json */,
+				B51703FF27B462CD0046DD06 /* DataUnpack.swift */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -95,22 +103,15 @@
 			isa = PBXGroup;
 			children = (
 				B54FAA5C27E3DE0A000A026E /* Scouting-App-0-1-0-Info.plist */,
+				B52F84B227B0688100B81A66 /* Scouting_App_0_1_0App.swift */,
 				B54FAA4A27E3C720000A026E /* Generate */,
 				B54FAA4727E3C669000A026E /* Manage */,
 				B517040127B4636C0046DD06 /* Files */,
-				B52F84B227B0688100B81A66 /* Scouting_App_0_1_0App.swift */,
-				B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */,
-				B5DE815527DED985004D0BB8 /* GameRow.swift */,
-				B5DE815727DEE927004D0BB8 /* GameView.swift */,
-				B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */,
+				B54FAA6527E426AF000A026E /* Match */,
+				B54FAA6327E42674000A026E /* Admin */,
+				B54FAA6427E4268F000A026E /* Field */,
 				B52F84B427B0688100B81A66 /* Home.swift */,
 				B508973227B70E7F0087EDD9 /* Survey.swift */,
-				B51703F027B367D80046DD06 /* FieldPageOne.swift */,
-				B517040627B464C40046DD06 /* AdminPageOne.swift */,
-				B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */,
-				B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */,
-				B51703FF27B462CD0046DD06 /* DataUnpack.swift */,
-				B51703FD27B460A50046DD06 /* Team.swift */,
 				B52F84B627B0688300B81A66 /* Assets.xcassets */,
 				B54FAA5127E3CE83000A026E /* Scaning */,
 				B52F84B827B0688300B81A66 /* Preview Content */,
@@ -146,9 +147,38 @@
 			isa = PBXGroup;
 			children = (
 				B54FAA5A27E3DC8E000A026E /* ScanQRCode.swift */,
-				B54FAA5D27E3E347000A026E /* ScanResult.swift */,
+				B54FAA5D27E3E347000A026E /* Handle.swift */,
 			);
 			path = Scaning;
+			sourceTree = "<group>";
+		};
+		B54FAA6327E42674000A026E /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				B517040627B464C40046DD06 /* AdminPageOne.swift */,
+				B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */,
+				B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		B54FAA6427E4268F000A026E /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */,
+				B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */,
+				B51703F027B367D80046DD06 /* FieldPageOne.swift */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
+		B54FAA6527E426AF000A026E /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				B5DE815527DED985004D0BB8 /* MatchRow.swift */,
+				B5DE815727DEE927004D0BB8 /* MatchView.swift */,
+			);
+			path = Match;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52F84BA27B0688300B81A66 /* Preview Assets.xcassets in Resources */,
+				B5C3C9EB27E817C400480445 /* matchData.json in Resources */,
 				B517040527B463D00046DD06 /* teamsData.json in Resources */,
 				B52F84B727B0688300B81A66 /* Assets.xcassets in Resources */,
 			);
@@ -234,12 +265,13 @@
 				B54FAA5527E3D0FA000A026E /* GenerateQRCode.swift in Sources */,
 				B5C35DF127B5C0B700550D86 /* FieldPageRow.swift in Sources */,
 				B517040727B464C40046DD06 /* AdminPageOne.swift in Sources */,
-				B5DE815827DEE927004D0BB8 /* GameView.swift in Sources */,
+				B5DE815827DEE927004D0BB8 /* MatchView.swift in Sources */,
 				B5C35DF327B5C1B300550D86 /* FieldTeamView.swift in Sources */,
 				B508973327B70E7F0087EDD9 /* Survey.swift in Sources */,
 				B54FAA6027E3E746000A026E /* QRManage.swift in Sources */,
-				B54FAA5E27E3E347000A026E /* ScanResult.swift in Sources */,
-				B5DE815627DED985004D0BB8 /* GameRow.swift in Sources */,
+				B54FAA5E27E3E347000A026E /* Handle.swift in Sources */,
+				B54FAA6227E42656000A026E /* Match.swift in Sources */,
+				B5DE815627DED985004D0BB8 /* MatchRow.swift in Sources */,
 				B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */,
 				B517040027B462CD0046DD06 /* DataUnpack.swift in Sources */,
 				B52F84B527B0688100B81A66 /* Home.swift in Sources */,
@@ -375,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scouting App 0.1.0/Preview Content\"";
+				DEVELOPMENT_TEAM = JW4MCX2PFC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scouting-App-0-1-0-Info.plist";
@@ -405,6 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scouting App 0.1.0/Preview Content\"";
+				DEVELOPMENT_TEAM = JW4MCX2PFC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Scouting-App-0-1-0-Info.plist";

@@ -10,10 +10,14 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 
 struct GenerateQRCode: View {
+    var match:Match
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
-    let pResents=UserDefaults.standard.object(forKey: "presents") as! [Bool]
-    let aUBScore=UserDefaults.standard.object(forKey: "auBScore") as! [Int]
+    var presents=UserDefaults.standard.object(forKey: "presents") as! [Bool]
+    var auBScore=UserDefaults.standard.object(forKey: "auBScore") as! [Int]
+    var auLeave=UserDefaults.standard.object(forKey: "auLeave") as! [Bool]
+    var cargoScore=UserDefaults.standard.object(forKey: "cargoScore") as! [Int]
+    var climbScore=UserDefaults.standard.object(forKey: "climbScore") as! [Int]
     
     var body: some View {
         Image(uiImage: generateQRCode(from: convertToText ()))
@@ -35,7 +39,8 @@ struct GenerateQRCode: View {
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
     func convertToText () -> String{
-        let data = String(pResents[0])+"\n"+String(aUBScore[0])+"\n"
+        let matchIndex = (match.index*3)+match.matchNum
+        let data = String(presents[matchIndex])+"\n"+String(auBScore[matchIndex])+"\n"+String(auLeave[matchIndex])+"\n"+String(cargoScore[matchIndex])+"\n"+String(climbScore[matchIndex])+"\n"
         return data
     }
 
@@ -43,6 +48,6 @@ struct GenerateQRCode: View {
 
 struct GenerateQRCode_Previews: PreviewProvider {
     static var previews: some View {
-        GenerateQRCode()
+        GenerateQRCode(match:matches[0])
     }
 }

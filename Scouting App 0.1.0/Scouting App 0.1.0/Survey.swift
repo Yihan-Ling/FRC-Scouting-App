@@ -10,6 +10,7 @@ import SwiftUI
 
 struct Survey: View {
     @State var team: Team
+    @State var match: Match
 //    let defaults = UserDefaults.standard
 //    @AppStorage("present") var present = true
 //    $team.present=
@@ -26,45 +27,46 @@ struct Survey: View {
                 .foregroundColor(Color.blue)
             Form {
                 TextField("Username", text: $team.id)
-                Toggle("Present", isOn: $team.present)
+                Toggle("Present", isOn: $match.present)
 //                $present = $team.present
 //               UserDefaults.standard.set($team.present, forKey: "email")
                 Section(header: Text("Auton")){
-                    Stepper(value: $team.auBScore,
+                    Stepper(value: $match.auBScore,
                             in: 0...100,
                             label: {
-                        Text("How many points did they score from balls in autonomous (4 for high 2 for low):  \(self.team.auBScore)")
+                        Text("How many points did they score from balls in autonomous (4 for high 2 for low):  \(self.match.auBScore)")
                     })
-                    Toggle("Did they leave the tarmac in autonomous", isOn: $team.auLeave)
+                    Toggle("Did they leave the tarmac in autonomous", isOn: $match.auLeave)
                 }
                 Section(header: Text("EVALUATION")) {
                     
-                    Stepper(value: $team.cargoScore,
+                    Stepper(value: $match.cargoScore,
                             in: 0...100,
                             label: {
-                        Text("How many points did they score from cargo (not including autonomous):  \(self.team.cargoScore)")
+                        Text("How many points did they score from cargo (not including autonomous):  \(self.match.cargoScore)")
                     })
                     
-                    Picker(selection: $team.climbScore, label: Text("Climbing points")) {
+                    Picker(selection: $match.climbScore, label: Text("Climbing points")) {
                         ForEach(0 ..< climbOption.count) {
                             Text(String(self.climbOption[$0]))
                         }
                     }
                     
-                    Stepper(value: $team.ballScore,
+                    Stepper(value: $match.ballScore,
                             in: 0...100,
                             label: {
-                        Text("Lower Hub Score:  \(self.team.ballScore)")
+                        Text("Lower Hub Score:  \(self.match.ballScore)")
                     })
                     
                 }
-                Section(header: Text("INFO")) {
-                    HStack {
-                        Text("Version")
-                        Spacer()
-                        Text("#2")
-                    }
-                }
+//                Section(header: Text("INFO")) {
+
+                //                    HStack {
+//                        Text("Version")
+//                        Spacer()
+//                        Text("#2")
+//                    }
+//                }
                 
 //                Section {
 //                    Button(action: {
@@ -78,7 +80,7 @@ struct Survey: View {
 //                            .multilineTextAlignment(.center)
 //                    }
                 Button("Save"){
-                    save(team:team)
+                    save(match:match)
                 }
 //                }
                 
@@ -87,14 +89,15 @@ struct Survey: View {
         }
         
     }
-    func save(team:Team){
-        presents[team.index]=team.present
-        teams[team.index].barIndex=team.barIndex
-        teams[team.index].ballScore=team.ballScore
-        auBScore[team.index]=team.auBScore
-        auLeave[team.index]=team.auLeave
-        cargoScore[team.index]=team.cargoScore
-        climbScore[team.index]=climbOption[team.climbScore]
+    func save(match:Match){
+        let matchIndex = (match.index*3)+match.matchNum
+        presents[matchIndex]=match.present
+//        teams[matchIndex].barIndex=match.barIndex
+//        teams[matchIndex].ballScore=match.ballScore
+        auBScore[matchIndex]=match.auBScore
+        auLeave[matchIndex]=match.auLeave
+        cargoScore[matchIndex]=match.cargoScore
+        climbScore[matchIndex]=climbOption[match.climbScore]
         let userDefaults = UserDefaults.standard
         userDefaults.set(presents, forKey: "presents")
         presents=userDefaults.object(forKey: "presents") as! [Bool]
@@ -107,34 +110,12 @@ struct Survey: View {
         userDefaults.set(climbScore, forKey: "climbScore")
         climbScore=userDefaults.object(forKey: "climbScore") as! [Int]
     }
-//    func getDocumentDirectory() -> URL {
-//        let paths=FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        return paths[0]
-//    }
-//    
-//    func save() -> String{
-//
-//        let str = "Test"
-//        let url = getDocumentDirectory().appendingPathComponent("message.txt")
-//        let input = "No change"
-//        do{
-//            try str.write(to: url, atomically: true, encoding: .utf8)
-//            let input = try String(contentsOf: url)
-//            return(input)
-//        }
-//        catch{
-//            print(error.localizedDescription)
-//        }
-//        return(input)
-//    }
-//    func save (team: String, present:Bool, barScore:Int, ballScore:Int) -> (team: String, present: Bool, barScore: Int, ballScore: Int){
-//        
-//    }
+
 }
 
 struct Survey_Previews: PreviewProvider {
     static var previews: some View {
-        Survey(team:teams[0])
+        Survey(team:teams[0], match: matches[0])
     }
 }
 

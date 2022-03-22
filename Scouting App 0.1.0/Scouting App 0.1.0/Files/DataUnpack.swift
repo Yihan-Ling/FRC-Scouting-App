@@ -7,24 +7,22 @@
 
 import Foundation
 
-var teams: [Team] = load("teamsData.json")
-var presents: [Bool] = [true, true, true, true]
-var auBScore: [Int] = [0,0,0]
-var auLeave: [Bool] = [false,false,false]
-var cargoScore: [Int] = [0,0,0]
-var climbScore: [Int] = [0,0,0]
-var climbOption: [Int] = [0,0,0]
 
-func initialSave(team:Team){
-    for team in teams{
-        presents[team.index]=team.present
-        teams[team.index].barIndex=team.barIndex
-        teams[team.index].ballScore=team.ballScore
-        auBScore[team.index]=team.auBScore
-        auLeave[team.index]=team.auLeave
-        cargoScore[team.index]=team.cargoScore
-        climbScore[team.index]=climbOption[team.climbScore]
-        let userDefaults = UserDefaults.standard
+let userDefaults = UserDefaults.standard
+
+var teams: [Team] = load("teamsData.json")
+var matches: [Match] = load("matchData.json")
+var presents: [Bool] = [true, true, true, true, true, true, true, true, true]
+var auBScore: [Int] = [0,0,0,0,0,0,0,0,0]
+var auLeave: [Bool] = [false,false,false,false,false,false,false,false,false]
+var cargoScore: [Int] = [0,0,0,0,0,0,0,0,0]
+var climbScore: [Int] = [0,0,0,0,0,0,0,0,0]
+var climbOption: [Int] = [0,0,0,0,0,0,0,0,0]
+var initialized = false
+
+
+func initialSave(){
+
         userDefaults.set(presents, forKey: "presents")
         presents=userDefaults.object(forKey: "presents") as! [Bool]
         userDefaults.set(auBScore, forKey: "auBScore")
@@ -35,11 +33,16 @@ func initialSave(team:Team){
         cargoScore=userDefaults.object(forKey: "cargoScore") as! [Int]
         userDefaults.set(climbScore, forKey: "climbScore")
         climbScore=userDefaults.object(forKey: "climbScore") as! [Int]
-    }
+        initialized = true
+    
     
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
+    if (userDefaults.object(forKey: "presents")==nil){
+        initialSave()
+    }
+//    initialSave()
 //    let url = getDocumentDirectory().appendingPathComponent(filename)
     let data : Data
 //    do{

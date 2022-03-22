@@ -40,11 +40,11 @@ struct ScanQRCode: View {
 //    }
     @State private var isPresentingScanner = false
         @State private var scannedCode: String?
-
+    var match: Match
         var body: some View {
             VStack(spacing: 10) {
                 if let code = scannedCode {
-                    NavigationLink("Next page", destination: ScanResult(scannedCode: code), isActive: .constant(true)).hidden()
+                    NavigationLink("Next page", destination: Handle(scannedCode: code, match: match), isActive: .constant(true)).hidden()
                 }
 
                 Button("Scan Code") {
@@ -67,6 +67,6 @@ struct ScanQRCode: View {
 
 struct ScanQRCode_Previews: PreviewProvider {
     static var previews: some View {
-        ScanQRCode()
+        ScanQRCode(match:matches[0])
     }
 }

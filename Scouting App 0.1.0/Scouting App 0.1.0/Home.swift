@@ -10,6 +10,7 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
+        
         NavigationView{
             ZStack{
                 Image("Home Page")
@@ -29,18 +30,43 @@ struct Home: View {
                         .frame(height:80)
                     
                     NavigationLink(destination: AdminPageOne(team: teams[0])) {
-                        AdminButton()
+                        StartButton()
                     }
 
-                    Spacer()
-                            .frame(height:100)
+//                    Spacer()
+//                            .frame(height:100)
+//
+//                    NavigationLink(destination: FieldPageOne(team: teams[0])) {
+//                        FieldButton()
+//                    }
                     
-                    NavigationLink(destination: FieldPageOne(team: teams[0])) {
-                        FieldButton()
-                    }
+                    
                 }
             }
         }
+    }
+    
+    func initialSave(){
+    //    for match in matches{
+    //        presents[match.index]=team.present
+    //        teams[team.index].barIndex=team.barIndex
+    //        teams[team.index].ballScore=team.ballScore
+    //        auBScore[team.index]=team.auBScore
+    //        auLeave[team.index]=team.auLeave
+    //        cargoScore[team.index]=team.cargoScore
+    //        climbScore[team.index]=climbOption[team.climbScore]
+        userDefaults.set(presents, forKey: "presents")
+        presents=userDefaults.object(forKey: "presents") as! [Bool]
+        userDefaults.set(auBScore, forKey: "auBScore")
+        auBScore=userDefaults.object(forKey: "auBScore") as! [Int]
+        userDefaults.set(auLeave, forKey: "auLeave")
+        auLeave=userDefaults.object(forKey: "auLeave") as! [Bool]
+        userDefaults.set(cargoScore, forKey: "cargoScore")
+        cargoScore=userDefaults.object(forKey: "cargoScore") as! [Int]
+        userDefaults.set(climbScore, forKey: "climbScore")
+        climbScore=userDefaults.object(forKey: "climbScore") as! [Int]
+    //    }
+        
     }
 }
 
@@ -71,19 +97,19 @@ struct IamText: View {
 
 
 
-struct AdminButton: View {
+struct StartButton: View {
     var body: some View {
-        Text("Admin")
+        Text("Start")
             .fontWeight(.bold)
                 .font(.title)
                 .padding()
-                .background(Color.purple)
+                .background(Color.green)
                 .cornerRadius(40)
                 .foregroundColor(.white)
                 .padding(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 40)
-                        .stroke(Color.purple, lineWidth: 5)
+                        .stroke(Color.green, lineWidth: 5)
                     )
     }
 }

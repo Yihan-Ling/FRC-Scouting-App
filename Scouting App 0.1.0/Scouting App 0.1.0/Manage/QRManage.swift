@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct QRManage: View {
+    var match: Match
     var body: some View {
         VStack(spacing:100){
 
-            NavigationLink(destination: GenerateQRCode()) {
+            NavigationLink(destination: GenerateQRCode(match:match)) {
                 Text("Generate")
                     .fontWeight(.bold)
                     .font(.title)
@@ -27,7 +28,7 @@ struct QRManage: View {
             }
 
             
-            NavigationLink(destination: ScanQRCode()) {
+            NavigationLink(destination: ScanQRCode(match:match)) {
                 Text("Scan")
                     .fontWeight(.bold)
                     .font(.title)
@@ -47,7 +48,7 @@ struct QRManage: View {
 
 struct QRManage_Previews: PreviewProvider {
     static var previews: some View {
-        QRManage()
+        QRManage(match: matches[0])
     }
 }
 

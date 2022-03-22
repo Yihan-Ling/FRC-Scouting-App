@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct AdminPageRow: View {
+struct AdminTeamRow: View {
     var team: Team
     var body: some View {
 //        NavigationView{
@@ -41,12 +41,12 @@ struct AdminPageRow: View {
     }
 }
 
-struct AdminPageRow_Previews: PreviewProvider {
+struct AdminTeamRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AdminPageRow(team: teams[0])
+            AdminTeamRow(team: teams[0])
                 .previewLayout(.fixed(width: 300, height: 70))
-            AdminPageRow(team: teams[1])
+            AdminTeamRow(team: teams[1])
                 .previewLayout(.fixed(width: 300, height: 70))
         }
 
