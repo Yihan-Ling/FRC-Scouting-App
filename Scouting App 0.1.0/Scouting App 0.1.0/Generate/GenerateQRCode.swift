@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  GenerateQRCode.swift
 //  Scouting App 0.1.0
 //
 //  Created by Carson Ling on 3/17/22.
@@ -20,6 +20,7 @@ struct GenerateQRCode: View {
     var climbScore=UserDefaults.standard.object(forKey: "climbScore") as! [Int]
     
     var body: some View {
+        //Create QR Code Image UI
         Image(uiImage: generateQRCode(from: convertToText ()))
             .resizable()
             .interpolation(.none)
@@ -28,8 +29,10 @@ struct GenerateQRCode: View {
             
     }
     func generateQRCode(from string: String) -> UIImage {
+        //Get data
         filter.message = Data(string.utf8)
-
+        
+        //Create QR Code from data
         if let outputImage = filter.outputImage {
             if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
                 return UIImage(cgImage: cgimg)
@@ -39,6 +42,7 @@ struct GenerateQRCode: View {
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
     func convertToText () -> String{
+        //Covert Match Info to Text
         let matchIndex = (match.index*3)+match.matchNum
         let data = String(presents[matchIndex])+"\n"+String(auBScore[matchIndex])+"\n"+String(auLeave[matchIndex])+"\n"+String(cargoScore[matchIndex])+"\n"+String(climbScore[matchIndex])+"\n"
         return data

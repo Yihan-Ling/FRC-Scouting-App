@@ -12,18 +12,14 @@ struct Handle: View {
     var match: Match
     
     var body: some View {
-        
-        
         VStack{
             Text(scannedCode)
             Text(save(match: match))
         }
-        
-        
     }
+    
     func save(match:Match)->String {
         let message = "Saved!!!"
-        
         let components = scannedCode.components(separatedBy: "\n")
         let matchIndex = (match.index*3)+match.matchNum
         

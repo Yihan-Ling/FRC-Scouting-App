@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B508973327B70E7F0087EDD9 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B508973227B70E7F0087EDD9 /* Survey.swift */; };
-		B51703F127B367D80046DD06 /* FieldPageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51703F027B367D80046DD06 /* FieldPageOne.swift */; };
 		B51703FE27B460A50046DD06 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51703FD27B460A50046DD06 /* Team.swift */; };
 		B517040027B462CD0046DD06 /* DataUnpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51703FF27B462CD0046DD06 /* DataUnpack.swift */; };
 		B517040527B463D00046DD06 /* teamsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B517040427B463D00046DD06 /* teamsData.json */; };
@@ -25,8 +24,6 @@
 		B54FAA6227E42656000A026E /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA6127E42656000A026E /* Match.swift */; };
 		B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */; };
 		B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */; };
-		B5C35DF127B5C0B700550D86 /* FieldPageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */; };
-		B5C35DF327B5C1B300550D86 /* FieldTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */; };
 		B5C3C9EB27E817C400480445 /* matchData.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C3C9EA27E817C400480445 /* matchData.json */; };
 		B5DE815627DED985004D0BB8 /* MatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815527DED985004D0BB8 /* MatchRow.swift */; };
 		B5DE815827DEE927004D0BB8 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815727DEE927004D0BB8 /* MatchView.swift */; };
@@ -34,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		B508973227B70E7F0087EDD9 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
-		B51703F027B367D80046DD06 /* FieldPageOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldPageOne.swift; sourceTree = "<group>"; };
 		B51703FD27B460A50046DD06 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B51703FF27B462CD0046DD06 /* DataUnpack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUnpack.swift; sourceTree = "<group>"; };
 		B517040427B463D00046DD06 /* teamsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teamsData.json; sourceTree = "<group>"; };
@@ -52,8 +48,6 @@
 		B54FAA6127E42656000A026E /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamRow.swift; sourceTree = "<group>"; };
 		B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamView.swift; sourceTree = "<group>"; };
-		B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldPageRow.swift; sourceTree = "<group>"; };
-		B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTeamView.swift; sourceTree = "<group>"; };
 		B5C3C9EA27E817C400480445 /* matchData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = matchData.json; sourceTree = "<group>"; };
 		B5DE815527DED985004D0BB8 /* MatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRow.swift; sourceTree = "<group>"; };
 		B5DE815727DEE927004D0BB8 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
@@ -109,7 +103,6 @@
 				B517040127B4636C0046DD06 /* Files */,
 				B54FAA6527E426AF000A026E /* Match */,
 				B54FAA6327E42674000A026E /* Admin */,
-				B54FAA6427E4268F000A026E /* Field */,
 				B52F84B427B0688100B81A66 /* Home.swift */,
 				B508973227B70E7F0087EDD9 /* Survey.swift */,
 				B52F84B627B0688300B81A66 /* Assets.xcassets */,
@@ -160,16 +153,6 @@
 				B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */,
 			);
 			path = Admin;
-			sourceTree = "<group>";
-		};
-		B54FAA6427E4268F000A026E /* Field */ = {
-			isa = PBXGroup;
-			children = (
-				B5C35DF027B5C0B700550D86 /* FieldPageRow.swift */,
-				B5C35DF227B5C1B300550D86 /* FieldTeamView.swift */,
-				B51703F027B367D80046DD06 /* FieldPageOne.swift */,
-			);
-			path = Field;
 			sourceTree = "<group>";
 		};
 		B54FAA6527E426AF000A026E /* Match */ = {
@@ -259,14 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B51703F127B367D80046DD06 /* FieldPageOne.swift in Sources */,
 				B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */,
 				B54FAA5B27E3DC8E000A026E /* ScanQRCode.swift in Sources */,
 				B54FAA5527E3D0FA000A026E /* GenerateQRCode.swift in Sources */,
-				B5C35DF127B5C0B700550D86 /* FieldPageRow.swift in Sources */,
 				B517040727B464C40046DD06 /* AdminPageOne.swift in Sources */,
 				B5DE815827DEE927004D0BB8 /* MatchView.swift in Sources */,
-				B5C35DF327B5C1B300550D86 /* FieldTeamView.swift in Sources */,
 				B508973327B70E7F0087EDD9 /* Survey.swift in Sources */,
 				B54FAA6027E3E746000A026E /* QRManage.swift in Sources */,
 				B54FAA5E27E3E347000A026E /* Handle.swift in Sources */,

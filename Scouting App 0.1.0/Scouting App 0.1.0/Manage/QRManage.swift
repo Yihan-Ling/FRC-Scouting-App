@@ -11,38 +11,35 @@ struct QRManage: View {
     var match: Match
     var body: some View {
         VStack(spacing:100){
-
+            // Link to Generate QR Code
             NavigationLink(destination: GenerateQRCode(match:match)) {
-                Text("Generate")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding()
-                    .background(Color.purple)
-                    .cornerRadius(40)
-                    .foregroundColor(.white)
-                    .padding(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 40)
-                            .stroke(Color.purple, lineWidth: 5)
-                    )
+                button(text: "Generate")
             }
 
-            
+            //Link to Scan QR Code
             NavigationLink(destination: ScanQRCode(match:match)) {
-                Text("Scan")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding()
-                    .background(Color.purple)
-                    .cornerRadius(40)
-                    .foregroundColor(.white)
-                    .padding(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 40)
-                            .stroke(Color.purple, lineWidth: 5)
-                    )
+                button(text: "Scan")
             }
         }
+    }
+}
+
+// Button Structure
+struct button: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .fontWeight(.bold)
+                .font(.title)
+                .padding()
+                .background(Color.green)
+                .cornerRadius(40)
+                .foregroundColor(.white)
+                .padding(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 40)
+                        .stroke(Color.green, lineWidth: 5)
+                    )
     }
 }
 

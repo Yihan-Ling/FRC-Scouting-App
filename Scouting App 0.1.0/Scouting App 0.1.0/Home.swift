@@ -13,60 +13,31 @@ struct Home: View {
         
         NavigationView{
             ZStack{
+                //Create Background Image
                 Image("Home Page")
                     .aspectRatio(contentMode: .fill)
                     .offset(y: -20)
                 
                 VStack{
-
+                    //Hello Text
                     HelloBar()
                     
                     Spacer()
                         .frame(height:150)
                     
+                    //
                     IamText()
                     
                     Spacer()
                         .frame(height:80)
                     
+                    //Start Button
                     NavigationLink(destination: AdminPageOne(team: teams[0])) {
                         StartButton()
                     }
-
-//                    Spacer()
-//                            .frame(height:100)
-//
-//                    NavigationLink(destination: FieldPageOne(team: teams[0])) {
-//                        FieldButton()
-//                    }
-                    
-                    
                 }
             }
         }
-    }
-    
-    func initialSave(){
-    //    for match in matches{
-    //        presents[match.index]=team.present
-    //        teams[team.index].barIndex=team.barIndex
-    //        teams[team.index].ballScore=team.ballScore
-    //        auBScore[team.index]=team.auBScore
-    //        auLeave[team.index]=team.auLeave
-    //        cargoScore[team.index]=team.cargoScore
-    //        climbScore[team.index]=climbOption[team.climbScore]
-        userDefaults.set(presents, forKey: "presents")
-        presents=userDefaults.object(forKey: "presents") as! [Bool]
-        userDefaults.set(auBScore, forKey: "auBScore")
-        auBScore=userDefaults.object(forKey: "auBScore") as! [Int]
-        userDefaults.set(auLeave, forKey: "auLeave")
-        auLeave=userDefaults.object(forKey: "auLeave") as! [Bool]
-        userDefaults.set(cargoScore, forKey: "cargoScore")
-        cargoScore=userDefaults.object(forKey: "cargoScore") as! [Int]
-        userDefaults.set(climbScore, forKey: "climbScore")
-        climbScore=userDefaults.object(forKey: "climbScore") as! [Int]
-    //    }
-        
     }
 }
 
@@ -90,12 +61,6 @@ struct IamText: View {
             .foregroundColor(Color.yellow)
     }
 }
-
-
-
-
-
-
 
 struct StartButton: View {
     var body: some View {

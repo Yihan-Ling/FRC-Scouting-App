@@ -10,8 +10,8 @@ import SwiftUI
 
 struct AdminPageOne: View {
     var team: Team
-
     var body: some View {
+        //List of all the teams
         List (teams){ team in
             AdminTeamRow(team: team)
         }

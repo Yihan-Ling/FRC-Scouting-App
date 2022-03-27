@@ -1,5 +1,5 @@
 //
-//  Form.swift
+//  Survey.swift
 //  Scouting App 0.1.0
 //
 //  Created by Carson Ling on 2/11/22.
@@ -11,12 +11,7 @@ import SwiftUI
 struct Survey: View {
     @State var team: Team
     @State var match: Match
-//    let defaults = UserDefaults.standard
-//    @AppStorage("present") var present = true
-//    $team.present=
     var climbOption = [0, 4, 6, 10, 15]
-    var frameworks = ["UIKit", "Core Data", "CloudKit", "SwiftUI"]
-    @State private var selectedFrameworkIndex = 0
     
     var body: some View {
         
@@ -28,8 +23,6 @@ struct Survey: View {
             Form {
                 TextField("Username", text: $team.id)
                 Toggle("Present", isOn: $match.present)
-//                $present = $team.present
-//               UserDefaults.standard.set($team.present, forKey: "email")
                 Section(header: Text("Auton")){
                     Stepper(value: $match.auBScore,
                             in: 0...100,
@@ -59,41 +52,19 @@ struct Survey: View {
                     })
                     
                 }
-//                Section(header: Text("INFO")) {
-
-                //                    HStack {
-//                        Text("Version")
-//                        Spacer()
-//                        Text("#2")
-//                    }
-//                }
-                
-//                Section {
-//                    Button(action: {
-//                        save()
-//                    }) {
-//                        Text("Submit")
-//                    }
-//                    NavigationLink(destination: SaveResult(team: team)) {
-//                        Text("Submit")
-//                            .font(.headline)
-//                            .multilineTextAlignment(.center)
-//                    }
                 Button("Save"){
                     save(match:match)
                 }
-//                }
                 
             }
-//            .navigationBarTitle("Survey")
         }
         
     }
+    
+    //Save survey result to userDefaults
     func save(match:Match){
         let matchIndex = (match.index*3)+match.matchNum
         presents[matchIndex]=match.present
-//        teams[matchIndex].barIndex=match.barIndex
-//        teams[matchIndex].ballScore=match.ballScore
         auBScore[matchIndex]=match.auBScore
         auLeave[matchIndex]=match.auLeave
         cargoScore[matchIndex]=match.cargoScore

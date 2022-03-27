@@ -11,32 +11,31 @@ import SwiftUI
 struct AdminTeamRow: View {
     var team: Team
     var body: some View {
-//        NavigationView{
-        
-            HStack {
-                VStack{
-                    Text(team.id)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.yellow)
-                        .multilineTextAlignment(.center)
-                        .frame(width: 150)
-                    Text(team.school)
-                        .font(.caption)
-                        .frame(width: 150)
-                }
-                
-                Spacer()
-                    .frame(width: 50)
-                NavigationLink(destination: AdminTeamView(team:teams[team.index])) {
-                    Text(team.name)
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                }
-                
-                
+        HStack {
+            VStack{
+                //Team id
+                Text(team.id)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.yellow)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 150)
+                //Team School Name
+                Text(team.school)
+                    .font(.caption)
+                    .frame(width: 150)
             }
-//        }
+            
+            Spacer()
+                .frame(width: 50)
+            NavigationLink(destination: AdminTeamView(team:teams[team.index])) {
+                Text(team.name)
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+            }
+            
+            
+        }
         
     }
 }
@@ -49,6 +48,6 @@ struct AdminTeamRow_Previews: PreviewProvider {
             AdminTeamRow(team: teams[1])
                 .previewLayout(.fixed(width: 300, height: 70))
         }
-
+        
     }
 }

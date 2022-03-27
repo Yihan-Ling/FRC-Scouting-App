@@ -1,5 +1,5 @@
 //
-//  GameRow.swift
+//  MatchRow.swift
 //  Scouting App 0.1.0
 //
 //  Created by Carson Ling on 3/13/22.
@@ -9,34 +9,35 @@ import SwiftUI
 
 struct MatchRow: View {
     var match: Match
+    
     var body: some View {
-        
-            HStack {
-                VStack{
-                    Text("Game "+String(match.matchNum+1))
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.yellow)
-                        .multilineTextAlignment(.center)
-                        .frame(width: 150)
-                    Text(match.id)
-                        .font(.caption)
-                        .frame(width: 150)
-                }
+        HStack {
+            VStack{
                 
-                Spacer()
-                    .frame(width: 50)
+                //Match Num
+                Text("Game "+String(match.matchNum+1))
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.yellow)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 150)
                 
-                NavigationLink(destination: MatchView(match:match)) {
-                    Text("More Detail")
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                }
-                
-                
-            } 
-
-        
+                //Team id
+                Text(match.id)
+                    .font(.caption)
+                    .frame(width: 150)
+            }
+            
+            Spacer()
+                .frame(width: 50)
+            
+            //Link to MatchView
+            NavigationLink(destination: MatchView(match:match)) {
+                Text("More Detail")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+            }
+        }
     }
 }
 
