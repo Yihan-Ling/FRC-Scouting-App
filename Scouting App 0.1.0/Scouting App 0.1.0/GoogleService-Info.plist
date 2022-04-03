@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>535226307582-ukt06cp21u2eaj3shrphmkvt22h0s99r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.535226307582-ukt06cp21u2eaj3shrphmkvt22h0s99r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBNNwfV4h5j2Z0JcUMHza0LCuxwFT4wbjw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>535226307582</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>CarsonL.Scouting-App-0-1-0</string>
+	<key>PROJECT_ID</key>
+	<string>frc-scouting-app-ea720</string>
+	<key>STORAGE_BUCKET</key>
+	<string>frc-scouting-app-ea720.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:535226307582:ios:5db8a01a8271642881e6af</string>
+</dict>
+</plist>

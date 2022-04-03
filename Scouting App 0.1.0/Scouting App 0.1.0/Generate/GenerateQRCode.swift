@@ -13,11 +13,23 @@ struct GenerateQRCode: View {
     var match:Match
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
-    var presents=UserDefaults.standard.object(forKey: "presents") as! [Bool]
-    var auBScore=UserDefaults.standard.object(forKey: "auBScore") as! [Int]
-    var auLeave=UserDefaults.standard.object(forKey: "auLeave") as! [Bool]
-    var cargoScore=UserDefaults.standard.object(forKey: "cargoScore") as! [Int]
-    var climbScore=UserDefaults.standard.object(forKey: "climbScore") as! [Int]
+    
+    var AutoLowerHub=UserDefaults.standard.object(forKey: "AutoLowerHub") as! [Int]
+    var AutoStartPos=UserDefaults.standard.object(forKey: "AutoStartPos") as! [Int]
+    var AutoUpperHub=UserDefaults.standard.object(forKey: "AutoUpperHub") as! [Int]
+    var ClimbAttempted=UserDefaults.standard.object(forKey: "ClimbAttempted") as! [Bool]
+    var ClimbLevel=UserDefaults.standard.object(forKey: "ClimbLevel") as! [Int]
+    var ClimbSuccessful=UserDefaults.standard.object(forKey: "ClimbSuccessful") as! [Bool]
+    var Comments=UserDefaults.standard.object(forKey: "Comments") as! [String]
+    var DefenseAbility=UserDefaults.standard.object(forKey: "DefenseAbility") as! [Int]
+    var DefensePlayedOn=UserDefaults.standard.object(forKey: "DefensePlayedOn") as! [Int]
+    var DriverLowerHub=UserDefaults.standard.object(forKey: "DriverLowerHub") as! [Int]
+    var DriverUpperHub=UserDefaults.standard.object(forKey: "DriverUpperHub") as! [Int]
+    var ExitTarmac=UserDefaults.standard.object(forKey: "ExitTarmac") as! [Bool]
+    var Fouls=UserDefaults.standard.object(forKey: "Fouls") as! [Int]
+    var MatchNum=UserDefaults.standard.object(forKey: "MatchNum") as! [Int]
+    var Present=UserDefaults.standard.object(forKey: "Present") as! [Bool]
+    var ScoringLocation=UserDefaults.standard.object(forKey: "ScoringLocation") as! [Int]
     
     var body: some View {
         //Create QR Code Image UI
@@ -43,8 +55,8 @@ struct GenerateQRCode: View {
     }
     func convertToText () -> String{
         //Covert Match Info to Text
-        let matchIndex = (match.index*3)+match.matchNum
-        let data = String(presents[matchIndex])+"\n"+String(auBScore[matchIndex])+"\n"+String(auLeave[matchIndex])+"\n"+String(cargoScore[matchIndex])+"\n"+String(climbScore[matchIndex])+"\n"
+        let matchIndex = (match.index*6)+match.matchIndex
+        let data = String(AutoLowerHub[matchIndex])+"\n"+String(AutoStartPos[matchIndex])+"\n"+String(AutoUpperHub[matchIndex])+"\n"+String(ClimbAttempted[matchIndex])+"\n"+String(ClimbLevel[matchIndex])+"\n"+String(ClimbSuccessful[matchIndex])+"\n"+String(Comments[matchIndex])+"\n"+String(DefenseAbility[matchIndex])+"\n"+String(DefensePlayedOn[matchIndex])+"\n"+String(DriverLowerHub[matchIndex])+"\n"+String(DriverUpperHub[matchIndex])+"\n"+String(ExitTarmac[matchIndex])+"\n"+String(Fouls[matchIndex])+"\n"+String(MatchNum[matchIndex])+"\n"+String(Present[matchIndex])+"\n"+String(ScoringLocation[matchIndex])+"\n"
         return data
     }
 

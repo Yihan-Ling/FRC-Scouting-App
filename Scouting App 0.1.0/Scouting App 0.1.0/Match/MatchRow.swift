@@ -13,9 +13,9 @@ struct MatchRow: View {
     var body: some View {
         HStack {
             VStack{
-                
+                let matchIndex = (match.index*6)+match.matchIndex
                 //Match Num
-                Text("Game "+String(match.matchNum+1))
+                Text("Game "+String(match.matchIndex+1))
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(Color.yellow)

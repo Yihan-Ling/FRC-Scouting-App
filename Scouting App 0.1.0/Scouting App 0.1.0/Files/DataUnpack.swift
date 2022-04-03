@@ -1,8 +1,8 @@
 //
 //  DataUnpack.swift
-//  Scouting App 0.1.0
+//  Scouting App 0.1.1
 //
-//  Created by Carson Ling on 2/9/22.
+//  Created by Carson Ling on 3/28/22.
 //
 
 import Foundation
@@ -12,32 +12,53 @@ let userDefaults = UserDefaults.standard
 
 var teams: [Team] = load("teamsData.json")
 var matches: [Match] = load("matchData.json")
-var presents: [Bool] = Array(repeating: true, count: 9)
-var auBScore: [Int] = Array(repeating: 0, count: 9)
-var auLeave: [Bool] = Array(repeating: false, count: 9)
-var cargoScore: [Int] = Array(repeating: 0, count: 9)
-var climbScore: [Int] = Array(repeating: 0, count: 9)
-var climbOption: [Int] = Array(repeating: 0, count: 9)
-var initialized = false
+
+var AutoLowerHub: [Int] = Array(repeating: 0, count: 240)
+var AutoStartPos: [Int] = Array(repeating: 0, count: 240)
+var AutoUpperHub: [Int] = Array(repeating: 0, count: 240)
+var ClimbAttempted: [Bool] = Array(repeating: true, count: 240)
+var ClimbLevel: [Int] = Array(repeating: 0, count: 240)
+var ClimbSuccessful: [Bool] = Array(repeating: true, count: 240)
+var Comments: [String] = Array(repeating: "", count: 240)
+var DefenseAbility: [Int] = Array(repeating: 0, count: 240)
+var DefensePlayedOn: [Int] = Array(repeating: 0, count: 240)
+var DriverLowerHub: [Int] = Array(repeating: 0, count: 240)
+var DriverUpperHub: [Int] = Array(repeating: 0, count: 240)
+var ExitTarmac: [Bool] = Array(repeating:true, count: 240)
+var Fouls: [Int] = Array(repeating: 0, count: 240)
+var MatchNum: [Int] = Array(repeating: 0, count: 240)
+var Present: [Bool] = Array(repeating: true, count: 240)
+var ScoringLocation: [Int] = Array(repeating: 0, count: 240)
+
+
+var edited: [Bool] = Array(repeating: false, count: 240)
+
+//var initialized = false
 
 //Set initial values to UserDefaults
 func initialSave(){
-    userDefaults.set(presents, forKey: "presents")
-    presents=userDefaults.object(forKey: "presents") as! [Bool]
-    userDefaults.set(auBScore, forKey: "auBScore")
-    auBScore=userDefaults.object(forKey: "auBScore") as! [Int]
-    userDefaults.set(auLeave, forKey: "auLeave")
-    auLeave=userDefaults.object(forKey: "auLeave") as! [Bool]
-    userDefaults.set(cargoScore, forKey: "cargoScore")
-    cargoScore=userDefaults.object(forKey: "cargoScore") as! [Int]
-    userDefaults.set(climbScore, forKey: "climbScore")
-    climbScore=userDefaults.object(forKey: "climbScore") as! [Int]
-    initialized = true
+    userDefaults.set(AutoLowerHub, forKey: "AutoLowerHub")
+    userDefaults.set(AutoStartPos, forKey: "AutoStartPos")
+    userDefaults.set(AutoUpperHub, forKey: "AutoUpperHub")
+    userDefaults.set(ClimbAttempted, forKey: "ClimbAttempted")
+    userDefaults.set(ClimbLevel, forKey: "ClimbLevel")
+    userDefaults.set(ClimbSuccessful, forKey: "ClimbSuccessful")
+    userDefaults.set(Comments, forKey: "Comments")
+    userDefaults.set(DefenseAbility, forKey: "DefenseAbility")
+    userDefaults.set(DefensePlayedOn, forKey: "DefensePlayedOn")
+    userDefaults.set(DriverLowerHub, forKey: "DriverLowerHub")
+    userDefaults.set(DriverUpperHub, forKey: "DriverUpperHub")
+    userDefaults.set(ExitTarmac, forKey: "ExitTarmac")
+    userDefaults.set(Fouls, forKey: "Fouls")
+    userDefaults.set(MatchNum, forKey: "MatchNum")
+    userDefaults.set(Present, forKey: "Present")
+    userDefaults.set(ScoringLocation, forKey: "ScoringLocation")
+    userDefaults.set(edited, forKey: "edited")
 }
 
 //Unpack JSON Data into struct Team or Match
 func load<T: Decodable>(_ filename: String) -> T {
-    if (userDefaults.object(forKey: "presents")==nil){
+    if (userDefaults.object(forKey: "edited")==nil){
         initialSave()
     }
 

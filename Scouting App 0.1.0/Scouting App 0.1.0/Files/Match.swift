@@ -10,12 +10,21 @@ import Foundation
 struct Match: Hashable, Codable, Identifiable{
     var id: String
     var index: Int
-    var matchNum: Int
-    var present: Bool
-    var barIndex: Int
-    var ballScore: Int
-    var auBScore: Int
-    var auLeave: Bool
-    var cargoScore: Int
-    var climbScore: Int
+    var matchIndex: Int
+    var AutoLowerHub: Int
+    var AutoStartPos: Int
+    var AutoUpperHub: Int
+    var ClimbAttempted: Bool
+    var ClimbLevel: Int
+    var ClimbSuccessful: Bool
+    var Comments: String
+    var DefenseAbility: Int
+    var DefensePlayedOn: Int
+    var DriverLowerHub: Int
+    var DriverUpperHub: Int
+    var ExitTarmac: Bool
+    var Fouls: Int
+    var MatchNum: Int
+    var Present: Bool
+    var ScoringLocation: Int
 }

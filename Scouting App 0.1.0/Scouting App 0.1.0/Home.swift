@@ -16,7 +16,7 @@ struct Home: View {
                 //Create Background Image
                 Image("Home Page")
                     .aspectRatio(contentMode: .fill)
-                    .offset(y: -20)
+                    .offset(y: -100)
                 
                 VStack{
                     //Hello Text
@@ -26,15 +26,22 @@ struct Home: View {
                         .frame(height:150)
                     
                     //
-                    IamText()
+//                    IamText()
                     
-                    Spacer()
-                        .frame(height:80)
+//                    Spacer()
+//                        .frame(height:40)
                     
                     //Start Button
                     NavigationLink(destination: AdminPageOne(team: teams[0])) {
                         StartButton()
                     }
+                    Spacer()
+                        .frame(height:80)
+                    
+                    NavigationLink(destination: SyncPageOne()) {
+                        SyncButton()
+                    }
+
                 }
             }
         }
@@ -45,7 +52,7 @@ struct Home: View {
 
 struct HelloBar: View {
     var body: some View {
-        Text("Hello, Scout!")
+        Text("Hello, 7407!")
             .font(.largeTitle)
             .fontWeight(.bold)
             .foregroundColor(Color(red: 0.01, green: 0.543, blue: 0.66))
@@ -75,6 +82,23 @@ struct StartButton: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 40)
                         .stroke(Color.green, lineWidth: 5)
+                    )
+    }
+}
+
+struct SyncButton: View {
+    var body: some View {
+        Text("Sync")
+            .fontWeight(.bold)
+                .font(.title)
+                .padding()
+                .background(Color.green)
+                .cornerRadius(40)
+                .foregroundColor(.white)
+                .padding(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 40)
+                        .stroke(Color.purple, lineWidth: 5)
                     )
     }
 }

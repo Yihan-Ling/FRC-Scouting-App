@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79B121EA696A317578353736 /* Pods_Scouting_App_0_1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCF44457164D53AF02158A9 /* Pods_Scouting_App_0_1_0.framework */; };
 		B508973327B70E7F0087EDD9 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B508973227B70E7F0087EDD9 /* Survey.swift */; };
 		B51703FE27B460A50046DD06 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51703FD27B460A50046DD06 /* Team.swift */; };
 		B517040027B462CD0046DD06 /* DataUnpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51703FF27B462CD0046DD06 /* DataUnpack.swift */; };
@@ -25,11 +26,16 @@
 		B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */; };
 		B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */; };
 		B5C3C9EB27E817C400480445 /* matchData.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C3C9EA27E817C400480445 /* matchData.json */; };
-		B5DE815627DED985004D0BB8 /* MatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815527DED985004D0BB8 /* MatchRow.swift */; };
-		B5DE815827DEE927004D0BB8 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE815727DEE927004D0BB8 /* MatchView.swift */; };
+		B5CE382D27F2A3B300C5A07E /* MatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE382C27F2A3B300C5A07E /* MatchRow.swift */; };
+		B5CE382F27F2A3DE00C5A07E /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE382E27F2A3DE00C5A07E /* MatchView.swift */; };
+		B5CE38A027F4F91700C5A07E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5CE389F27F4F91700C5A07E /* GoogleService-Info.plist */; };
+		B5CE38A227F4FC2900C5A07E /* SyncPageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE38A127F4FC2900C5A07E /* SyncPageOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BCF44457164D53AF02158A9 /* Pods_Scouting_App_0_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scouting_App_0_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59E37B6499274DCC6B6EBBC3 /* Pods-Scouting App 0.1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scouting App 0.1.0.debug.xcconfig"; path = "Target Support Files/Pods-Scouting App 0.1.0/Pods-Scouting App 0.1.0.debug.xcconfig"; sourceTree = "<group>"; };
+		793D91A72A5395C7C9FD8A53 /* Pods-Scouting App 0.1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scouting App 0.1.0.release.xcconfig"; path = "Target Support Files/Pods-Scouting App 0.1.0/Pods-Scouting App 0.1.0.release.xcconfig"; sourceTree = "<group>"; };
 		B508973227B70E7F0087EDD9 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		B51703FD27B460A50046DD06 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B51703FF27B462CD0046DD06 /* DataUnpack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUnpack.swift; sourceTree = "<group>"; };
@@ -49,8 +55,10 @@
 		B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamRow.swift; sourceTree = "<group>"; };
 		B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamView.swift; sourceTree = "<group>"; };
 		B5C3C9EA27E817C400480445 /* matchData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = matchData.json; sourceTree = "<group>"; };
-		B5DE815527DED985004D0BB8 /* MatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRow.swift; sourceTree = "<group>"; };
-		B5DE815727DEE927004D0BB8 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		B5CE382C27F2A3B300C5A07E /* MatchRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRow.swift; sourceTree = "<group>"; };
+		B5CE382E27F2A3DE00C5A07E /* MatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		B5CE389F27F4F91700C5A07E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5CE38A127F4FC2900C5A07E /* SyncPageOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncPageOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54FAA5827E3DBAA000A026E /* CodeScanner in Frameworks */,
+				79B121EA696A317578353736 /* Pods_Scouting_App_0_1_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25EAB970B2F49752D3122908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF44457164D53AF02158A9 /* Pods_Scouting_App_0_1_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		432301ED25FA4C271C6B864B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59E37B6499274DCC6B6EBBC3 /* Pods-Scouting App 0.1.0.debug.xcconfig */,
+				793D91A72A5395C7C9FD8A53 /* Pods-Scouting App 0.1.0.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B517040127B4636C0046DD06 /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +108,8 @@
 			children = (
 				B52F84B127B0688100B81A66 /* Scouting App 0.1.0 */,
 				B52F84B027B0688100B81A66 /* Products */,
+				432301ED25FA4C271C6B864B /* Pods */,
+				25EAB970B2F49752D3122908 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +132,10 @@
 				B54FAA6527E426AF000A026E /* Match */,
 				B54FAA6327E42674000A026E /* Admin */,
 				B52F84B427B0688100B81A66 /* Home.swift */,
+				B5CE38A127F4FC2900C5A07E /* SyncPageOne.swift */,
 				B508973227B70E7F0087EDD9 /* Survey.swift */,
 				B52F84B627B0688300B81A66 /* Assets.xcassets */,
+				B5CE389F27F4F91700C5A07E /* GoogleService-Info.plist */,
 				B54FAA5127E3CE83000A026E /* Scaning */,
 				B52F84B827B0688300B81A66 /* Preview Content */,
 			);
@@ -158,8 +188,8 @@
 		B54FAA6527E426AF000A026E /* Match */ = {
 			isa = PBXGroup;
 			children = (
-				B5DE815527DED985004D0BB8 /* MatchRow.swift */,
-				B5DE815727DEE927004D0BB8 /* MatchView.swift */,
+				B5CE382C27F2A3B300C5A07E /* MatchRow.swift */,
+				B5CE382E27F2A3DE00C5A07E /* MatchView.swift */,
 			);
 			path = Match;
 			sourceTree = "<group>";
@@ -171,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B52F84BD27B0688300B81A66 /* Build configuration list for PBXNativeTarget "Scouting App 0.1.0" */;
 			buildPhases = (
+				8EEDC22CB615F714317B7158 /* [CP] Check Pods Manifest.lock */,
 				B52F84AB27B0688100B81A66 /* Sources */,
 				B52F84AC27B0688100B81A66 /* Frameworks */,
 				B52F84AD27B0688100B81A66 /* Resources */,
+				983F9CA628A238C2AF52D18E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,12 +262,55 @@
 			files = (
 				B52F84BA27B0688300B81A66 /* Preview Assets.xcassets in Resources */,
 				B5C3C9EB27E817C400480445 /* matchData.json in Resources */,
+				B5CE38A027F4F91700C5A07E /* GoogleService-Info.plist in Resources */,
 				B517040527B463D00046DD06 /* teamsData.json in Resources */,
 				B52F84B727B0688300B81A66 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EEDC22CB615F714317B7158 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scouting App 0.1.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		983F9CA628A238C2AF52D18E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scouting App 0.1.0/Pods-Scouting App 0.1.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scouting App 0.1.0/Pods-Scouting App 0.1.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Scouting App 0.1.0/Pods-Scouting App 0.1.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B52F84AB27B0688100B81A66 /* Sources */ = {
@@ -244,18 +319,19 @@
 			files = (
 				B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */,
 				B54FAA5B27E3DC8E000A026E /* ScanQRCode.swift in Sources */,
+				B5CE382F27F2A3DE00C5A07E /* MatchView.swift in Sources */,
 				B54FAA5527E3D0FA000A026E /* GenerateQRCode.swift in Sources */,
 				B517040727B464C40046DD06 /* AdminPageOne.swift in Sources */,
-				B5DE815827DEE927004D0BB8 /* MatchView.swift in Sources */,
 				B508973327B70E7F0087EDD9 /* Survey.swift in Sources */,
 				B54FAA6027E3E746000A026E /* QRManage.swift in Sources */,
 				B54FAA5E27E3E347000A026E /* Handle.swift in Sources */,
+				B5CE38A227F4FC2900C5A07E /* SyncPageOne.swift in Sources */,
 				B54FAA6227E42656000A026E /* Match.swift in Sources */,
-				B5DE815627DED985004D0BB8 /* MatchRow.swift in Sources */,
 				B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */,
 				B517040027B462CD0046DD06 /* DataUnpack.swift in Sources */,
 				B52F84B527B0688100B81A66 /* Home.swift in Sources */,
 				B51703FE27B460A50046DD06 /* Team.swift in Sources */,
+				B5CE382D27F2A3B300C5A07E /* MatchRow.swift in Sources */,
 				B52F84B327B0688100B81A66 /* Scouting_App_0_1_0App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +457,7 @@
 		};
 		B52F84BE27B0688300B81A66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59E37B6499274DCC6B6EBBC3 /* Pods-Scouting App 0.1.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -412,6 +489,7 @@
 		};
 		B52F84BF27B0688300B81A66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 793D91A72A5395C7C9FD8A53 /* Pods-Scouting App 0.1.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
