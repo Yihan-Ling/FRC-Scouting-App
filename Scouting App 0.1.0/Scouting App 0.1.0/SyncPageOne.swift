@@ -13,14 +13,18 @@ struct SyncPageOne: View {
         VStack{
             Button {
                 readFromdb()
-            } label: {
-                Text("Update Data")
-            }
-            Button {
                 writeTodb()
             } label: {
-                Text("Upload data to database")
+                Text("Update & Upload")
             }
+            
+            Spacer()
+                .frame(height:60)
+//            Button {
+//                writeTodb()
+//            } label: {
+//                Text("Upload data to database")
+//            }
             Button {
                 export()
             } label: {
@@ -58,8 +62,8 @@ struct SyncPageOne: View {
             for j in 0...11{
                 data+="{\n"
                 data+="\"id\": "+"\""+teams[i].id+"\""+",\n"
-                data+="\"index\": "+String(i)+",\n"
-                data+="\"matchIndex\": "+String(j)+",\n"
+//                data+="\"index\": "+String(i)+",\n"
+//                data+="\"matchIndex\": "+String(j)+",\n"
                 data+="\"AutoLowerHub\": "+String(AutoLowerHub[i*12+j])+",\n"
                 data+="\"AutoStartPos\": "+String(AutoStartPos[i*12+j])+",\n"
                 data+="\"AutoUpperHub\": "+String(AutoUpperHub[i*12+j])+",\n"

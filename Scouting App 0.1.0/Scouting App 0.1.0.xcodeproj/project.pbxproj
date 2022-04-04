@@ -23,6 +23,7 @@
 		B54FAA5E27E3E347000A026E /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5D27E3E347000A026E /* Handle.swift */; };
 		B54FAA6027E3E746000A026E /* QRManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA5F27E3E746000A026E /* QRManage.swift */; };
 		B54FAA6227E42656000A026E /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54FAA6127E42656000A026E /* Match.swift */; };
+		B55172B927FB70B600F36350 /* GeneralSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55172B827FB70B600F36350 /* GeneralSurvey.swift */; };
 		B5C35DE427B4B5DD00550D86 /* AdminTeamRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */; };
 		B5C35DEF27B5BDF500550D86 /* AdminTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */; };
 		B5C3C9EB27E817C400480445 /* matchData.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C3C9EA27E817C400480445 /* matchData.json */; };
@@ -52,6 +53,7 @@
 		B54FAA5D27E3E347000A026E /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
 		B54FAA5F27E3E746000A026E /* QRManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRManage.swift; sourceTree = "<group>"; };
 		B54FAA6127E42656000A026E /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		B55172B827FB70B600F36350 /* GeneralSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSurvey.swift; sourceTree = "<group>"; };
 		B5C35DE327B4B5DC00550D86 /* AdminTeamRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamRow.swift; sourceTree = "<group>"; };
 		B5C35DEE27B5BDF500550D86 /* AdminTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTeamView.swift; sourceTree = "<group>"; };
 		B5C3C9EA27E817C400480445 /* matchData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = matchData.json; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				B52F84B427B0688100B81A66 /* Home.swift */,
 				B5CE38A127F4FC2900C5A07E /* SyncPageOne.swift */,
 				B508973227B70E7F0087EDD9 /* Survey.swift */,
+				B55172B827FB70B600F36350 /* GeneralSurvey.swift */,
 				B52F84B627B0688300B81A66 /* Assets.xcassets */,
 				B5CE389F27F4F91700C5A07E /* GoogleService-Info.plist */,
 				B54FAA5127E3CE83000A026E /* Scaning */,
@@ -331,6 +334,7 @@
 				B517040027B462CD0046DD06 /* DataUnpack.swift in Sources */,
 				B52F84B527B0688100B81A66 /* Home.swift in Sources */,
 				B51703FE27B460A50046DD06 /* Team.swift in Sources */,
+				B55172B927FB70B600F36350 /* GeneralSurvey.swift in Sources */,
 				B5CE382D27F2A3B300C5A07E /* MatchRow.swift in Sources */,
 				B52F84B327B0688100B81A66 /* Scouting_App_0_1_0App.swift in Sources */,
 			);
