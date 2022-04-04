@@ -55,28 +55,28 @@ struct SyncPageOne: View {
         var data = "[\n"
         
         for i in 0...39{
-            for j in 0...5{
+            for j in 0...11{
                 data+="{\n"
                 data+="\"id\": "+"\""+teams[i].id+"\""+",\n"
-//                data+="\"index\": "+String(i)+",\n"
-//                data+="\"matchIndex\": "+String(j)+",\n"
-                data+="\"AutoLowerHub\": "+String(AutoLowerHub[i*6+j])+",\n"
-                data+="\"AutoStartPos\": "+String(AutoStartPos[i*6+j])+",\n"
-                data+="\"AutoUpperHub\": "+String(AutoUpperHub[i*6+j])+",\n"
-                data+="\"ClimbAttempted\": "+String(ClimbAttempted[i*6+j])+",\n"
-                data+="\"ClimbLevel\": "+String(ClimbLevel[i*6+j])+",\n"
-                data+="\"ClimbSuccessful\": "+String(ClimbSuccessful[i*6+j])+",\n"
-                data+="\"Comments\": "+"\""+String(Comments[i*6+j])+"\""+",\n"
-                data+="\"DefenseAbility\": "+String(DefenseAbility[i*6+j])+",\n"
-                data+="\"DefensePlayedOn\": "+String(DefensePlayedOn[i*6+j])+",\n"
-                data+="\"DriverLowerHub\": "+String(DriverLowerHub[i*6+j])+",\n"
-                data+="\"DriverUpperHub\": "+String(DriverUpperHub[i*6+j])+",\n"
-                data+="\"ExitTarmac\": "+String(ExitTarmac[i*6+j])+",\n"
-                data+="\"Fouls\": "+String(Fouls[i*6+j])+",\n"
-                data+="\"MatchNum\": "+String(MatchNum[i*6+j])+",\n"
-                data+="\"Present\": "+String(Present[i*6+j])+",\n"
-                data+="\"ScoringLocation\": "+String(ScoringLocation[i*6+j])+",\n"
-                if i*6+j == 239{
+                data+="\"index\": "+String(i)+",\n"
+                data+="\"matchIndex\": "+String(j)+",\n"
+                data+="\"AutoLowerHub\": "+String(AutoLowerHub[i*12+j])+",\n"
+                data+="\"AutoStartPos\": "+String(AutoStartPos[i*12+j])+",\n"
+                data+="\"AutoUpperHub\": "+String(AutoUpperHub[i*12+j])+",\n"
+                data+="\"ClimbAttempted\": "+String(ClimbAttempted[i*12+j])+",\n"
+                data+="\"ClimbLevel\": "+String(ClimbLevel[i*12+j])+",\n"
+                data+="\"ClimbSuccessful\": "+String(ClimbSuccessful[i*12+j])+",\n"
+                data+="\"Comments\": "+"\""+String(Comments[i*12+j])+"\""+",\n"
+                data+="\"DefenseAbility\": "+String(DefenseAbility[i*12+j])+",\n"
+                data+="\"DefensePlayedOn\": "+String(DefensePlayedOn[i*12+j])+",\n"
+                data+="\"DriverLowerHub\": "+String(DriverLowerHub[i*12+j])+",\n"
+                data+="\"DriverUpperHub\": "+String(DriverUpperHub[i*12+j])+",\n"
+                data+="\"ExitTarmac\": "+String(ExitTarmac[i*12+j])+",\n"
+                data+="\"Fouls\": "+String(Fouls[i*12+j])+",\n"
+                data+="\"MatchNum\": "+String(MatchNum[i*12+j])+",\n"
+                data+="\"Present\": "+String(Present[i*12+j])+",\n"
+                data+="\"ScoringLocation\": "+String(ScoringLocation[i*12+j])+",\n"
+                if i*12+j == 479{
                     data+="}\n"
                 }
                 else{
@@ -165,7 +165,7 @@ struct SyncPageOne: View {
             var edited=UserDefaults.standard.object(forKey: "edited") as! [Bool]
             
             
-            for x in 0...239{
+            for x in 0...479{
                 if(edited[x]==false){
                     autoLowerHub[x]=a[x]
                     autoStartPos[x]=b[x]

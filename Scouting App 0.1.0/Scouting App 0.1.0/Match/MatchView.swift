@@ -36,7 +36,7 @@ struct MatchView: View {
         VStack(){
             
 //            //All info of the match
-            let matchIndex: Int = Int((match.index*6)+match.matchIndex)
+            let matchIndex: Int = Int((match.index*12)+match.matchIndex)
             Group{
                 Text(match.id+" Game "+String(match.matchIndex+1))
                 Text("AutoLowerHub: "+String(AutoLowerHub[matchIndex]))

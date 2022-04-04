@@ -13,12 +13,25 @@ struct AdminTeamView: View {
         let matchIndex = team.index*6
 //        print (matchIndex)
         List{
-            MatchRow(match: matches[matchIndex])
-            MatchRow(match: matches[matchIndex+1])
-            MatchRow(match: matches[matchIndex+2])
-            MatchRow(match: matches[matchIndex+3])
-            MatchRow(match: matches[matchIndex+4])
-            MatchRow(match: matches[matchIndex+5])
+            Group{
+                MatchRow(match: matches[matchIndex])
+                MatchRow(match: matches[matchIndex+1])
+                MatchRow(match: matches[matchIndex+2])
+                MatchRow(match: matches[matchIndex+3])
+                MatchRow(match: matches[matchIndex+4])
+                MatchRow(match: matches[matchIndex+5])
+                
+            }
+            Group{
+                MatchRow(match: matches[matchIndex+6])
+                MatchRow(match: matches[matchIndex+7])
+                MatchRow(match: matches[matchIndex+8])
+                MatchRow(match: matches[matchIndex+9])
+                MatchRow(match: matches[matchIndex+10])
+                MatchRow(match: matches[matchIndex+11])
+            }
+            
+            
         }
 
     }
