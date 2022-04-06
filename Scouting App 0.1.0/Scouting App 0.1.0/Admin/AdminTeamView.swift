@@ -10,7 +10,7 @@ import SwiftUI
 struct AdminTeamView: View {
     var team: Team
     var body: some View {
-        let matchIndex = team.index*6
+        let matchIndex = team.index*12
 //        print (matchIndex)
         List{
             Group{

@@ -55,7 +55,7 @@ struct GenerateQRCode: View {
     }
     func convertToText () -> String{
         //Covert Match Info to Text
-        let matchIndex = (match.index*6)+match.matchIndex
+        let matchIndex = (match.index*12)+match.matchIndex
         let data = String(AutoLowerHub[matchIndex])+"\n"+String(AutoStartPos[matchIndex])+"\n"+String(AutoUpperHub[matchIndex])+"\n"+String(ClimbAttempted[matchIndex])+"\n"+String(ClimbLevel[matchIndex])+"\n"+String(ClimbSuccessful[matchIndex])+"\n"+String(Comments[matchIndex])+"\n"+String(DefenseAbility[matchIndex])+"\n"+String(DefensePlayedOn[matchIndex])+"\n"+String(DriverLowerHub[matchIndex])+"\n"+String(DriverUpperHub[matchIndex])+"\n"+String(ExitTarmac[matchIndex])+"\n"+String(Fouls[matchIndex])+"\n"+String(MatchNum[matchIndex])+"\n"+String(Present[matchIndex])+"\n"+String(ScoringLocation[matchIndex])+"\n"
         return data
     }

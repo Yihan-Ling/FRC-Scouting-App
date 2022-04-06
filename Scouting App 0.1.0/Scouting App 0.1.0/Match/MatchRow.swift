@@ -9,18 +9,29 @@ import SwiftUI
 
 struct MatchRow: View {
     var match: Match
-    
+    let lastEdited = UserDefaults.standard.object(forKey: "lastEdited") as! [Int]
     var body: some View {
         HStack {
             VStack{
                 let matchIndex = (match.index*12)+match.matchIndex
                 //Match Num
-                Text("Game "+String(match.matchIndex+1))
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.yellow)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 150)
+                if(lastEdited[match.index]==match.matchIndex){
+                    Text("Game "+String(match.matchIndex+1))
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.red)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 150)
+                }
+                else{
+                    Text("Game "+String(match.matchIndex+1))
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.yellow)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 150)
+                }
+                
                 
                 //Team id
                 Text(match.id)

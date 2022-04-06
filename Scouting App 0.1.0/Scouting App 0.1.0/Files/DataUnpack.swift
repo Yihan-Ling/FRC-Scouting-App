@@ -30,8 +30,12 @@ var MatchNum: [Int] = Array(repeating: 0, count: 480)
 var Present: [Bool] = Array(repeating: true, count: 480)
 var ScoringLocation: [Int] = Array(repeating: 0, count: 480)
 
-
 var edited: [Bool] = Array(repeating: false, count: 480)
+
+var MatchIndex: [Int] = Array(repeating: 0, count: 480)
+
+var lastEdited:  [Int] = Array(repeating: 0, count: 40)
+
 
 //var initialized = false
 
@@ -54,13 +58,17 @@ func initialSave(){
     userDefaults.set(Present, forKey: "Present")
     userDefaults.set(ScoringLocation, forKey: "ScoringLocation")
     userDefaults.set(edited, forKey: "edited")
+    userDefaults.set(MatchIndex, forKey: "MatchIndex")
+    userDefaults.set(lastEdited, forKey: "lastEdited")
 }
 
 //Unpack JSON Data into struct Team or Match
 func load<T: Decodable>(_ filename: String) -> T {
-//    if (userDefaults.object(forKey: "edited")==nil){
+    if (userDefaults.object(forKey: "AutoLowerHub")==nil){
         initialSave()
-//    }
+    }
+    
+    
 
     let data : Data
 

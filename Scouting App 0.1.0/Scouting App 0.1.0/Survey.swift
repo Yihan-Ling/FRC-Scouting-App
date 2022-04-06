@@ -84,7 +84,11 @@ struct Survey: View {
     
     //Save survey result to userDefaults
     func save(match:Match){
-        let matchIndex = (match.index*6)+match.matchIndex
+        var lastEdited = UserDefaults.standard.object(forKey: "lastEdited") as! [Int]
+        lastEdited[match.index]=match.matchIndex+1
+        
+        
+        let matchIndex = (match.index*12)+match.matchIndex
         AutoLowerHub[matchIndex] = match.AutoLowerHub
         AutoStartPos[matchIndex] = match.AutoStartPos
         AutoUpperHub[matchIndex] = match.AutoUpperHub
@@ -109,7 +113,8 @@ struct Survey: View {
         
         edited[matchIndex] = true
         userDefaults.set(edited, forKey: "edited")
-        
+        userDefaults.set(lastEdited, forKey: "lastEdited")
+        AutoLowerHub=userDefaults.object(forKey: "AutoLowerHub") as! [Int]
         userDefaults.set(AutoLowerHub, forKey: "AutoLowerHub")
         AutoLowerHub=userDefaults.object(forKey: "AutoLowerHub") as! [Int]
         
