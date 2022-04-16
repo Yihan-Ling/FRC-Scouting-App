@@ -13,23 +13,24 @@ let userDefaults = UserDefaults.standard
 var teams: [Team] = load("teamsData.json")
 var matches: [Match] = load("matchData.json")
 
-var AutoLowerHub: [Int] = Array(repeating: 0, count: 480)
-var AutoStartPos: [Int] = Array(repeating: 0, count: 480)
-var AutoUpperHub: [Int] = Array(repeating: 0, count: 480)
-var ClimbAttempted: [Bool] = Array(repeating: true, count: 480)
-var ClimbLevel: [Int] = Array(repeating: 0, count: 480)
-var ClimbSuccessful: [Bool] = Array(repeating: true, count: 480)
-var Comments: [String] = Array(repeating: "", count: 480)
-var DefenseAbility: [Int] = Array(repeating: 0, count: 480)
-var DefensePlayedOn: [Int] = Array(repeating: 0, count: 480)
-var DriverLowerHub: [Int] = Array(repeating: 0, count: 480)
-var DriverUpperHub: [Int] = Array(repeating: 0, count: 480)
-var ExitTarmac: [Bool] = Array(repeating:true, count: 480)
-var Fouls: [Int] = Array(repeating: 0, count: 480)
-var MatchNum: [Int] = Array(repeating: 0, count: 480)
-var Present: [Bool] = Array(repeating: true, count: 480)
-var ScoringLocation: [Int] = Array(repeating: 0, count: 480)
 
+var TeamID: [String] = []
+var AutoLowerHub: [Int] = []
+var AutoStartPos: [Int] = []
+var AutoUpperHub: [Int] = []
+var ClimbAttempted: [Bool] = []
+var ClimbLevel: [Int] = []
+var ClimbSuccessful: [Bool] = []
+var Comments: [String] = []
+var DefenseAbility: [Int] = []
+var DefensePlayedOn: [Int] = []
+var DriverLowerHub: [Int] = []
+var DriverUpperHub: [Int] = []
+var ExitTarmac: [Bool] = []
+var Fouls: [Int] = []
+var MatchNum: [Int] = []
+var Present: [Bool] = []
+var ScoringLocation: [Int] = []
 var edited: [Bool] = Array(repeating: false, count: 480)
 
 var MatchIndex: [Int] = Array(repeating: 0, count: 480)
@@ -41,6 +42,7 @@ var lastEdited:  [Int] = Array(repeating: 0, count: 40)
 
 //Set initial values to UserDefaults
 func initialSave(){
+    userDefaults.set(TeamID, forKey: "TeamID")
     userDefaults.set(AutoLowerHub, forKey: "AutoLowerHub")
     userDefaults.set(AutoStartPos, forKey: "AutoStartPos")
     userDefaults.set(AutoUpperHub, forKey: "AutoUpperHub")
@@ -64,7 +66,7 @@ func initialSave(){
 
 //Unpack JSON Data into struct Team or Match
 func load<T: Decodable>(_ filename: String) -> T {
-    if (userDefaults.object(forKey: "AutoLowerHub")==nil){
+    if (userDefaults.object(forKey: "TeamID")==nil){
         initialSave()
     }
     

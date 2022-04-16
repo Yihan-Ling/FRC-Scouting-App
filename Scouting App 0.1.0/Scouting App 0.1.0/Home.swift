@@ -38,11 +38,11 @@ struct Home: View {
                     Spacer()
                         .frame(height:50)
                     //Start Button
-                    NavigationLink(destination: AdminPageOne(team: teams[0])) {
-                        StartButton()
-                    }
-                    Spacer()
-                        .frame(height:50)
+//                    NavigationLink(destination: AdminPageOne(team: teams[0])) {
+//                        StartButton()
+//                    }
+//                    Spacer()
+//                        .frame(height:50)
                     
                     NavigationLink(destination: SyncPageOne()) {
                         SyncButton()

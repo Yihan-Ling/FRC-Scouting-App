@@ -23,6 +23,7 @@ struct GeneralSurvey: View {
     @State var defenseability: Int = 0
     @State var defenseplayedon: Int = 0
     @State var comments: String = ""
+    @State var showAlert: Bool = false
     
     var body: some View {
         
@@ -86,6 +87,8 @@ struct GeneralSurvey: View {
                 
                 Button("Save"){
                     save()
+                }.alert(isPresented: $showAlert) {
+                    Alert(title: Text("saved"))
                 }
 
             }
@@ -95,43 +98,69 @@ struct GeneralSurvey: View {
     
     //Save survey result to userDefaults
     func save(){
+        showAlert.toggle()
         
         let userDefaults = UserDefaults.standard
-        var teamIdToIndex: Dictionary <String, Int>=[:]
-        for team in teams{
-            teamIdToIndex[team.id]=team.index
-        }
+//        var teamIdToIndex: Dictionary <String, Int>=[:]
+//        for team in teams{
+//            teamIdToIndex[team.id]=team.index
+//        }
+//
+//        let i:Int = teamIdToIndex[teamid]!
+//
+//        var MatchIndex=userDefaults.object(forKey: "MatchIndex") as! [Int]
+//
+//        let matchIndex = (teams[i].index*12)+MatchIndex[i]
+//        MatchIndex[i]+=1
+//        userDefaults.set(MatchIndex, forKey: "MatchIndex")
         
-        let i:Int = teamIdToIndex[teamid]!
         
-        var MatchIndex=userDefaults.object(forKey: "MatchIndex") as! [Int]
+        var AutoLowerHub=UserDefaults.standard.object(forKey: "AutoLowerHub") as! [Int]
+        var AutoStartPos=UserDefaults.standard.object(forKey: "AutoStartPos") as! [Int]
+        var AutoUpperHub=UserDefaults.standard.object(forKey: "AutoUpperHub") as! [Int]
+        var ClimbAttempted=UserDefaults.standard.object(forKey: "ClimbAttempted") as! [Bool]
+        var ClimbLevel=UserDefaults.standard.object(forKey: "ClimbLevel") as! [Int]
+        var ClimbSuccessful=UserDefaults.standard.object(forKey: "ClimbSuccessful") as! [Bool]
+        var Comments=UserDefaults.standard.object(forKey: "Comments") as! [String]
+        var DefenseAbility=UserDefaults.standard.object(forKey: "DefenseAbility") as! [Int]
+        var DefensePlayedOn=UserDefaults.standard.object(forKey: "DefensePlayedOn") as! [Int]
+        var DriverLowerHub=UserDefaults.standard.object(forKey: "DriverLowerHub") as! [Int]
+        var DriverUpperHub=UserDefaults.standard.object(forKey: "DriverUpperHub") as! [Int]
+        var ExitTarmac=UserDefaults.standard.object(forKey: "ExitTarmac") as! [Bool]
+        var Fouls=UserDefaults.standard.object(forKey: "Fouls") as! [Int]
+        var MatchNum=UserDefaults.standard.object(forKey: "MatchNum") as! [Int]
+        var Present=UserDefaults.standard.object(forKey: "Present") as! [Bool]
+        var ScoringLocation=UserDefaults.standard.object(forKey: "ScoringLocation") as! [Int]
+        var TeamID=UserDefaults.standard.object(forKey: "TeamID") as! [String]
         
-        let matchIndex = (teams[i].index*12)+MatchIndex[i]
-        MatchIndex[i]+=1
-        userDefaults.set(MatchIndex, forKey: "MatchIndex")
-        AutoLowerHub[matchIndex] = autolow
-        AutoStartPos[matchIndex] = autostart
-        AutoUpperHub[matchIndex] = autohigh
-        ClimbAttempted[matchIndex] = climbattpeted
-        ClimbLevel[matchIndex] = climblevel
-        ClimbSuccessful[matchIndex] = climbsuccess
-        Comments[matchIndex] = comments
-        DefenseAbility[matchIndex] = defenseability
-        DefensePlayedOn[matchIndex] = defenseplayedon
-        DriverLowerHub[matchIndex] = driverlow
-        DriverUpperHub[matchIndex] = driverhigh
-        ExitTarmac[matchIndex] = tarmac
+        
+        TeamID += [teamid]
+        AutoLowerHub += [autolow]
+        AutoStartPos += [autostart]
+        AutoUpperHub += [autohigh]
+        ClimbAttempted += [climbattpeted]
+        ClimbLevel += [climblevel]
+        ClimbSuccessful += [climbsuccess]
+        Comments += [comments]
+        DefenseAbility += [defenseability]
+        DefensePlayedOn += [defenseplayedon]
+        DriverLowerHub += [driverlow]
+        DriverUpperHub += [driverhigh]
+        ExitTarmac += [tarmac]
 //        Fouls[matchIndex] = fouls
-//        MatchNum[matchIndex] = match.MatchNum
-        Present[matchIndex] = present
-//        ScoringLocation[matchIndex] = match.ScoringLocation
+        MatchNum += [matchnum]
+        Present += [present]
+//        ScoringLocation = [
         
         
        
 
         
-        edited[matchIndex] = true
-        userDefaults.set(edited, forKey: "edited")
+//        edited[matchIndex] = true
+//        userDefaults.set(edited, forKey: "edited")
+        
+        userDefaults.set(TeamID, forKey: "TeamID")
+        TeamID=userDefaults.object(forKey: "TeamID") as! [String]
         
         userDefaults.set(AutoLowerHub, forKey: "AutoLowerHub")
         AutoLowerHub=userDefaults.object(forKey: "AutoLowerHub") as! [Int]
@@ -178,8 +207,10 @@ struct GeneralSurvey: View {
         userDefaults.set(Present, forKey: "Present")
         Present=userDefaults.object(forKey: "Present") as! [Bool]
         
-        userDefaults.set(ScoringLocation, forKey: "ScoringLocation")
-        ScoringLocation=userDefaults.object(forKey: "ScoringLocation") as! [Int]
+//        userDefaults.set(ScoringLocation, forKey: "ScoringLocation")
+//        ScoringLocation=userDefaults.object(forKey: "ScoringLocation") as! [Int]
+        print(ClimbLevel)
+       
     }
 
 
