@@ -42,6 +42,7 @@ var lastEdited:  [Int] = Array(repeating: 0, count: 40)
 
 //Set initial values to UserDefaults
 func initialSave(){
+    
     userDefaults.set(TeamID, forKey: "TeamID")
     userDefaults.set(AutoLowerHub, forKey: "AutoLowerHub")
     userDefaults.set(AutoStartPos, forKey: "AutoStartPos")
